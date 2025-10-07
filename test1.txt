@@ -1,0 +1,97 @@
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.4400
+Precision (micro): 0.4400 | Recall (micro): 0.4400 | F1 (micro): 0.4400
+Precision (macro): 0.2417 | Recall (macro): 0.4271 | F1 (macro): 0.3021
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.6000    0.7500    0.6667         4
+                             api/kowale     0.4000    0.6667    0.5000         3
+                        api/weterynarze     0.6000    1.0000    0.7500         3
+                 api/wydarzenia/choroby     0.0000    0.0000    0.0000         3
+                api/wydarzenia/leczenia     0.3333    1.0000    0.5000         3
+                api/wydarzenia/podkucie     0.0000    0.0000    0.0000         3
+                 api/wydarzenia/rozrody     0.0000    0.0000    0.0000         3
+api/wydarzenia/zdarzenia_profilaktyczne     0.0000    0.0000    0.0000         3
+
+                               accuracy                         
+0.4400        25
+                              macro avg     0.2417    0.4271    0.3021        25
+                           weighted avg     0.2560    0.4400    0.3167        25
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                            3                            0                            1             
+               0                            0                   
+         0                            0                         
+   0
+                  api/kowale                            0                            2                            0             
+               0                            1                   
+         0                            0                         
+   0
+             api/weterynarze                            0                            0                            3             
+               0                            0                   
+         0                            0                         
+   0
+      api/wydarzenia/choroby                            1                            0                            0             
+               0                            2                   
+         0                            0                         
+   0
+     api/wydarzenia/leczenia                            0                            0                            0             
+               0                            3                   
+         0                            0                         
+   0
+     api/wydarzenia/podkucie                            0                            2                            1             
+               0                            0                   
+         0                            0                         
+   0
+      api/wydarzenia/rozrody                            1                            1                            0             
+               0                            0                   
+         0                            0                         
+   1
+api/wydarzenia/zdarzenia_profilaktyczne                         
+   0                            0                            0                            0                            3                            0                            0              
+              0
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10) ===
+- text: Koń ma gorączkę i kaszel, wpisz objawy
+  true: api/wydarzenia/choroby
+  pred: api/konie (method=semantic, score=0.8432)
+
+- text: Dodaj podkucie przodów i tyłów
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=semantic, score=0.8507)
+
+- text: Zarejestruj krycie klaczy
+  true: api/wydarzenia/rozrody
+  pred: api/kowale (method=semantic, score=0.8526)
+
+- text: Umów kucie u kowala na środę
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=semantic, score=0.858)
+
+- text: Edytuj profil konia o imieniu Karat
+  true: api/konie
+  pred: api/weterynarze (method=semantic, score=0.8596)
+
+- text: Zaplanuj profilaktykę: szczepienie i odrobaczenie jutro 
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.86)   
+
+- text: Wpisz korektę kopyt
+  true: api/wydarzenia/podkucie
+  pred: api/weterynarze (method=semantic, score=0.8621)
+
+- text: USG ciąży wyszło pozytywnie, wpisz wynik
+  true: api/wydarzenia/rozrody
+  pred: api/wydarzenia/zdarzenia_profilaktyczne (method=semantic, score=0.8622)
+
+- text: Zgłoś chorobę: podejrzenie kolki
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.8718) 
+
+- text: Wpisz szczepienie na grypę końską
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.874)  
