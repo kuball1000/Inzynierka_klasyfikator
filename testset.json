@@ -1,0 +1,43 @@
+{
+  "api/konie": [
+    "Dodaj nowego konia do systemu",
+    "Zarejestruj klacz Justynę po przyjeździe do stajni",
+    "Chcę dodać ogiera do bazy",
+    "Edytuj profil konia o imieniu Karat"
+  ],
+  "api/wydarzenia/zdarzenia_profilaktyczne": [
+    "Wpisz szczepienie na grypę końską",
+    "Dodaj odrobaczenie dla klaczy",
+    "Zaplanuj profilaktykę: szczepienie i odrobaczenie jutro"
+  ],
+  "api/wydarzenia/rozrody": [
+    "Zarejestruj krycie klaczy",
+    "Dodaj rozród: inseminacja w poniedziałek",
+    "USG ciąży wyszło pozytywnie, wpisz wynik"
+  ],
+  "api/wydarzenia/podkucie": [
+    "Dodaj podkucie przodów i tyłów",
+    "Umów kucie u kowala na środę",
+    "Wpisz korektę kopyt"
+  ],
+  "api/wydarzenia/leczenia": [
+    "Dodaj leczenie kulawizny z użyciem leków przeciwzapalnych",
+    "Kontynuacja leczenia po urazie, notatka kontrolna",
+    "Wprowadź terapię antybiotykową na 5 dni"
+  ],
+  "api/wydarzenia/choroby": [
+    "Zgłoś chorobę: podejrzenie kolki",
+    "Koń ma gorączkę i kaszel, wpisz objawy",
+    "Dodaj diagnozę schorzenia skóry"
+  ],
+  "api/kowale": [
+    "Dodaj nowego kowala do kontaktów",
+    "Pokaż listę kowali współpracujących",
+    "Zaktualizuj numer telefonu do podkuwacza"
+  ],
+  "api/weterynarze": [
+    "Dodaj weterynarza pracującego z naszą stajnią",
+    "Lista weterynarzy z okolicy",
+    "Edytuj dane lekarza weterynarii"
+  ]
+}
