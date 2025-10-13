@@ -1,0 +1,74 @@
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.5982
+Precision (micro): 0.5982 | Recall (micro): 0.5982 | F1 (micro): 0.5982
+Precision (macro): 0.6379 | Recall (macro): 0.5982 | F1 (macro): 0.5946
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.6667    0.2857    0.4000        14
+                             api/kowale     0.7857    0.7857    0.7857        14
+                        api/weterynarze     1.0000    0.6429    0.7826        14
+                 api/wydarzenia/choroby     0.6429    0.6429    0.6429        14
+                api/wydarzenia/leczenia     0.4583    0.7857    0.5789        14
+                api/wydarzenia/podkucie     0.5000    0.3571    0.4167        14
+                 api/wydarzenia/rozrody     0.6000    0.6429    0.6207        14
+api/wydarzenia/zdarzenia_profilaktyczne     0.4500    0.6429    0.5294        14
+
+                               accuracy                         0.5982       112
+                              macro avg     0.6379    0.5982    0.5946       112
+                           weighted avg     0.6379    0.5982    0.5946       112
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                            4                            0                            0                            2                            0                            3                            2                            3
+                  api/kowale                            0                           11                            0                            1                            0                            1                            1                            0
+             api/weterynarze                            0                            0                            9                            0                            1                            0                            0                            4
+      api/wydarzenia/choroby                            0                            0                            0                            9                            5                            0                            0                            0
+     api/wydarzenia/leczenia                            0                            0                            0                            0                           11                            1                            1                            1
+     api/wydarzenia/podkucie                            1                            3                            0                            1                            1                            5                            2                            1
+      api/wydarzenia/rozrody                            0                            0                            0                            1                            2                            0                            9                            2
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            0                            0                            4                   
+         0                            0                            9
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10) ===
+- text: Wpisz wizytę podkuwacza tylko na tyły
+  true: api/wydarzenia/podkucie
+  pred: api/wydarzenia/rozrody (method=semantic, score=0.8588)
+
+- text: Zarejestruj narodziny źrebaka
+  true: api/wydarzenia/rozrody
+  pred: api/wydarzenia/zdarzenia_profilaktyczne (method=semantic, score=0.8637)
+
+- text: Dodaj podkucie przodów i tyłów
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=semantic, score=0.8651)
+
+- text: Wpisz zabieg embriotransferu
+  true: api/wydarzenia/rozrody
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.8688)
+
+- text: Umów kucie u kowala na środę
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=semantic, score=0.8693)
+
+- text: Wpisz termin ściągnięcia szwów
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/podkucie (method=semantic, score=0.8733)
+
+- text: Zmień dane właściciela konia Pegaz
+  true: api/konie
+  pred: api/wydarzenia/podkucie (method=semantic, score=0.874)
+
+- text: Wpisz zabieg werkowania
+  true: api/wydarzenia/podkucie
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.8748)
+
+- text: Wpisz podanie suplementów diety
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/leczenia (method=semantic, score=0.8765)
+
+- text: Dodaj użycie specjalnych wkładek do podków
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=semantic, score=0.8765)
