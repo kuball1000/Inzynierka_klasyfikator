@@ -1,0 +1,311 @@
+{
+  "api/konie": {
+    "multipart/form-data": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "nazwa": {
+            "type": "string"
+          },
+          "numerPrzyzyciowy": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "numerChipa": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "rocznikUrodzenia": {
+            "type": "number"
+          },
+          "dataPrzybyciaDoStajni": {
+            "type": "string"
+          },
+          "dataOdejsciaZeStajni": {
+            "type": "string"
+          },
+          "rodzajKonia": {
+            "type": "string",
+            "enum": [
+              "Konie hodowlane",
+              "Konie rekreacyjne",
+              "Źrebaki",
+              "Konie sportowe"
+            ]
+          },
+          "plec": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "klacz",
+              "ogier",
+              "wałach",
+              null
+            ]
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "file": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "nazwa",
+          "rocznikUrodzenia",
+          "rodzajKonia"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "api/wydarzenia/zdarzenia_profilaktyczne": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "konieId": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "weterynarz": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "dataZdarzenia": {
+            "type": "string",
+            "format": "date"
+          },
+          "dataWaznosci": {
+            "type": "string",
+            "format": "date"
+          },
+          "rodzajZdarzenia": {
+            "type": "string",
+            "enum": [
+              "Odrobaczanie",
+              "Podanie suplementów",
+              "Szczepienie",
+              "Dentysta",
+              "Inne"
+            ]
+          },
+          "opisZdarzenia": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "konieId",
+          "weterynarz",
+          "dataZdarzenia",
+          "rodzajZdarzenia"
+        ]
+      }
+    }
+  },
+  "api/wydarzenia/rozrody": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "kon": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "weterynarz": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "dataZdarzenia": {
+            "type": "string"
+          },
+          "rodzajZdarzenia": {
+            "type": "string",
+            "enum": [
+              "Inseminacja konia",
+              "Sprawdzenie źrebności",
+              "Wyźrebienie",
+              "Inne"
+            ]
+          },
+          "opisZdarzenia": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kon",
+          "weterynarz",
+          "rodzajZdarzenia"
+        ]
+      }
+    }
+  },
+  "api/wydarzenia/podkucie": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "konieId": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "kowal": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "dataZdarzenia": {
+            "type": "string",
+            "format": "date"
+          },
+          "dataWaznosci": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "konieId",
+          "kowal",
+          "dataZdarzenia"
+        ]
+      }
+    }
+  },
+  "api/wydarzenia/choroby": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "kon": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "dataRozpoczecia": {
+            "type": "string"
+          },
+          "dataZakonczenia": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opisZdarzenia": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "kon"
+        ]
+      }
+    }
+  },
+  "api/kowale": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "imieINazwisko": {
+            "type": "string"
+          },
+          "numerTelefonu": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "hodowla": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "imieINazwisko",
+          "hodowla"
+        ]
+      }
+    }
+  },
+  "api/weterynarze": {
+    "application/json": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "imieINazwisko": {
+            "type": "string"
+          },
+          "numerTelefonu": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 15
+          },
+          "hodowla": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "imieINazwisko",
+          "hodowla"
+        ]
+      }
+    }
+  }
+}
