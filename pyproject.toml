@@ -1,0 +1,11 @@
+[project]
+name = "inzynierka-klasyfikator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "sentence-transformers>=5.1.1",
+]
