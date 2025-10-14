@@ -370,7 +370,7 @@ def login():
     })
     headers = {
     'Content-Type': 'application/json',
-    'Cookie': 'ACCESS_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImV4cCI6MTc2MDQ3MzUwNH0.PHqKviIkTpsRHXwgJaiBTyui1-Z32OabFXUN1Humq9A'
+    'Cookie': 'ACCESS_TOKEN=' + COOKIE_KEY
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
