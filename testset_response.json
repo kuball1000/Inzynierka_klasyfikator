@@ -1,0 +1,136 @@
+{
+  "api/konie": [
+    {
+      "description": "Dopisz proszę młodego wałacha Burzę, ma 2 lata i służy do rekreacji",
+      "informations": "Dzisiaj jest 15.05.2025.",
+      "output": "{ \"nazwa\": \"Burza\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie rekreacyjne\", \"plec\": \"ogier\", \"file\": false }"
+    },
+    {
+      "description": "Dzisiaj urodził się źrebak Storm, dodaj go do bazy.",
+      "informations": "Dzisiaj jest 15.05.2025.",
+      "output": "{ \"nazwa\": \"Storm\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2025, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Źrebaki\", \"plec\": null, \"file\": false }"
+    },
+    {
+      "description": "Dodaj nowego konia Błyskawica – to 6-letnia klacz, właśnie ją przywiozłem",
+      "informations": "Dzisiaj jest 15.05.2025.",
+      "output": "{ \"nazwa\": \"Błyskawica\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2019, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie rekreacyjne\", \"plec\": \"klacz\", \"file\": false }"
+    },
+    {
+      "description": "Zapisz mi informacje o nowej klaczy w mojej stajni, Błękitna jest 2 letnim koniem hodowlanym.",
+      "informations": "Dzisiaj jest 15.05.2025.",
+      "output": "{ \"nazwa\": \"Błękitna\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie hodowlane\", \"plec\": \"klacz\", \"file\": false }"
+    }
+  ],
+  "api/wydarzenia/choroby": [
+    {
+      "description": "Wicher w zeszłym tygodniu złapał grypę",
+      "informations": "Stan hodowli: Konie sportowe-Grom:1;Wicher:2 Konie hodowlane-Polka:3 Konie rekreacyjne-Mufasa:4;Samba:5;Czarek:6;Mango:7;Lolek:8 Źrebaki-Rino:9;Mini:10 Kowale-Zbigniew Marecki:1 Weterynarze-Iwona Sroka:1 Dzisiaj jest 19.05.2025",
+      "output": "{ \"kon\": 2, \"dataRozpoczecia\": \"2025-05-19\", \"opisZdarzenia\": \"Grypa\" }"
+    },
+    {
+      "description": "Czajka wczoraj stwierdziła, że Odi ma wrzody",
+      "informations": "Stan hodowli: Konie sportowe-Bizon:1;Atlas:2;Gina:3 Konie hodowlane-Rumba:4;Klusia:5;Luna:6;Milka:7 Konie rekreacyjne-Teksas:8;Bryza:9;Odi:10 Źrebaki-Fruzia:11;Iskra:12;Kropka:13;Drops:14 Kowale-Paweł Kaczmarek:1;Tomek Zięba:2 Weterynarze-Aleksandra Czajka:1;Marcin Grzelak:2 Dzisiaj jest 11.05.2025",
+      "output": "{ \"kon\": 10, \"dataRozpoczecia\": \"2025-05-10\", \"opisZdarzenia\": \"Wrzody\" }"
+    },
+    {
+      "description": "Oliwka kuleje na przednią prawa noge",
+      "informations": "Stan hodowli: Konie sportowe-Neon:1;Radar:2 Konie hodowlane-Kora:3;Gracja:4;Duma:5 Konie rekreacyjne-Bambi:6;Zara:7 Źrebaki-Plamka:8;Leo:9;Oliwka:10 Kowale-Wojciech Wrona:1 Weterynarze-Ewelina Maj:1;Magdalena Mróz:2 Dzisiaj jest 12.03.2025",
+      "output": "{ \"kon\": 10, \"dataRozpoczecia\": \"2025-03-12\", \"opisZdarzenia\": \"Kuleje na przednia prawa noge\" }"
+    },
+    {
+      "description": "Lotosowi wczoraj Karol zdiagnozował pruchnice",
+      "informations": "Stan hodowli: Konie sportowe-Hektor:1;Tornado:2;Flash:3;Lotos:4 Konie hodowlane-Mira:5;Gaja:6;Nutka:7;Selina:8 Konie rekreacyjne-Felka:9;Samba:10;Czarek:11;Tofik:12;Nela:13 Źrebaki-Zefir:14;Mała:15;Bąbel:16;Iskra:17;Ptyś:18 Kowale-Michał Kowalski:1;Mikołaj Róg:2;Mateusz Król:3 Weterynarze-Anna Kamińska:1;Zofia Bukowska:2;Karol Sienkiewicz:3 Dzisiaj jest 17.02.2025",
+      "output": "{ \"kon\": 4, \"dataRozpoczecia\": \"2025-02-17\", \"opisZdarzenia\": \"Prochnica\" }"
+    }
+  ],
+  "api/kowale": [
+    {
+      "description": "Dodaj mi Jakuba Detmera, który jest kowalem",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Jakub Detmer\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+    },
+    {
+      "description": "Hej, dodaj mi kowalika Szymusia Jankowskiego, tel 9855632145",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Szymuś Jankowski\", \"numerTelefonu\": \"9855632145\", \"hodowla\": 0 }"
+    }
+  ],
+  "api/wydarzenia/podkucie": [
+    {
+      "description": "Dodaj mi prosze informacje o tym ze Brzezinski byl u mnie 17 maja i podkuł wszystkie konie sportowe",
+      "informations": "Stan hodowli: Konie sportowe-Gina:1;Neon:2;Skra:3 Konie hodowlane-Bella:4;Milka:5;Gracja:6;Aura:7 Konie rekreacyjne-Felka:8;Samba:9;Bambi:10 Źrebaki-Figa:11;Mała:12;Plamka:13 Kowale-Radosław Kowal:1;Hubert Brzeziński:2 Weterynarze-Ewelina Maj:1",
+      "output": "{ \"konieId\": [1, 2, 3], \"kowal\": 2, \"dataZdarzenia\": \"2025-05-17\", \"dataRozpoczecia\": \"2025-05-17\", \"dataWaznosci\": \"2025-06-28\" }"
+    },
+    {
+      "description": "Zbysiu dziś podkuł mi wszystkie źrebaki",
+      "informations": "Stan hodowli: Konie sportowe-Lotos:1;Hektor:2;Tornado:3;Wicher:4 Konie hodowlane-Gaja:5;Róża:6;Klementyna:7 Konie rekreacyjne-Borys:8;Tofik:9;Teksas:10;Kodi:11;Zara:12 Źrebaki-Mgiełka:13;Leo:14;Iskra:15 Kowale-Wiktor Machowski:1;Zbigniew Marecki:2 Weterynarze-Aleksandra Czajka:1 Dzisiaj jest 30.06.2024",
+      "output": "{ \"konieId\": [13, 14, 15], \"kowal\": 2, \"dataZdarzenia\": \"2025-06-30\", \"dataRozpoczecia\": \"2025-06-30\", \"dataWaznosci\": \"2025-09-29\" }"
+    },
+    {
+      "description": "Andrzej tydzień temu podkuł Merlina, zapomniałem to dodać zajmij się tym",
+      "informations": "Stan hodowli: Konie sportowe-Piorun:1;Atlas:5;Simba:14 Konie hodowlane-Kleo:4;Selena:2;Dakota:6;Mira:7 Konie rekreacyjne-Mustang:8;Bryza:9;Felka:10;Merlin:11 Źrebaki-Bąbel:12;Oliwka:3;Figa:13;Zefir:15 Kowale-Rafał Mazur:1;Andrzej Duda:2 Weterynarze-Dominika Pawlak:1 Dzisiaj jest 19.05.2025",
+      "output": "{ \"konieId\": [11], \"kowal\": 2, \"dataZdarzenia\": \"2025-05-12\", \"dataRozpoczecia\": \"2025-05-12\", \"dataWaznosci\": \"2025-06-23\" }"
+    },
+    {
+      "description": "Dzisiaj Zbigniew Marecki podkuł Tornado, Luzaka i Błysk",
+      "informations": "Stan hodowli: Konie sportowe-Tornado:1;Błysk:2;Orion:3;Grafit:5 Konie hodowlane-Fala:4;Rumba:5;Klementyna:7;Aura:8 Konie rekreacyjne-Luzak:9;Samba:10;Tofik:12;Zara:13;Bryza:16 Źrebaki-Mgiełka:11;Oliwka:14;Drops:15 Kowale-Zbigniew Marecki:1;Jan Wrona:2 Weterynarze-Iwona Michalska:1 Dzisaj jest 19.05.2025",
+      "output": "{ \"konieId\": [1, 2, 9], \"kowal\": 1, \"dataZdarzenia\": \"2025-05-19\", \"dataRozpoczecia\": \"2025-05-19\", \"dataWaznosci\": \"2025-06-30\" }"
+    }
+  ],
+  "api/wydarzenia/rozrody": [
+    {
+      "description": "Asia dziś dokonała inseminacji czrnego",
+      "informations": "Stan hodowli: Konie sportowe-Czarny:1;Husarz:2;Meteor:3;Ryś:4 Konie hodowlane-Melba:5;Raja:6;Lilla:7 Konie rekreacyjne-Zyzio:8;Bongo:9;Zorka:10 Źrebaki-Mini:11;Rico:12;Pepsi:13 Kowale-Roman Flak:1;Hubert Kania:2 Weterynarze-Joanna Gruszka:1;Natalia Żuk:2;Jakub Lis:3 Dzisiaj jest 19.05.2024",
+      "output": "{ \"kon\": 1, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-19\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+    },
+    {
+      "description": "Ewelina sprawdziła mi 16 maja żrebność Koko",
+      "informations": "Stan hodowli: Konie sportowe-Piorun:1;Błysk:2 Konie hodowlane-Aksamitka:3 Konie rekreacyjne-Koko:4 Źrebaki-Bolek:5 Kowale-Mateusz Kępa:1 Weterynarze-Ewelina Sowa:1",
+      "output": "{ \"kon\": 4, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-16\", \"rodzajZdarzenia\": \"Sprawdzenie źrebności\" }"
+    },
+    {
+      "description": "Wczoraj Tomek inseminował mi Lasera",
+      "informations": "Stan hodowli: Konie sportowe-Bizon:1;Grom:2;Stratus:3;Laser:4 Konie hodowlane-Luiza:5;Magda:6;Perła:7 Konie rekreacyjne-Nela:8;Toffi:9;Melon:10 Źrebaki-Dropik:11;Kajtek:12;Nelka:13;Zazu:14;Titi:15;Kropka:16 Kowale-Adrian Dzik:1;Emil Musiał:2;Szymon Bocian:3 Weterynarze-Weronika Lew:1;Tomasz Rogowski:2 Dzisiaj jest 14.04.2025",
+      "output": "{ \"kon\": 4, \"weterynarz\": 2, \"dataZdarzenia\": \"2025-04-13\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+    },
+    {
+      "description": "Pegaz dzisiaj urodził,dodaj mi to do bazy i przypisz Ole do tego",
+      "informations": "Stan hodowli: Konie sportowe-Smok:1;Pegaz:2;Yeti:3 Konie hodowlane-Wika:4;Szafir:5 Konie rekreacyjne-Tina:6;Fanta:7 Źrebaki-Mufi:8;Ptyś:9;Szarik:10 Kowale-Marcin Woźniak:1 Weterynarze-Aleksandra Plewa:1;Barbara Okoń:2 Dzisiaj jest 12.03.2025",
+      "output": "{ \"kon\": 2, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-03-12\", \"rodzajZdarzenia\": \"Wyźrebienie\" }"
+    }
+  ],
+  "api/weterynarze": [
+    {
+      "description": "Dodaj mi Jakuba Detmera, który jest weterynarzem",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Jakub Detmer\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+    },
+    {
+      "description": "Hej, dodaj mi weterynarza Szymusia Jankowskiego, tel 9855632145",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Szymuś Jankowski\", \"numerTelefonu\": \"9855632145\", \"hodowla\": 0 }"
+    }
+  ],
+  "api/wydarzenia/zdarzenia_profilaktyczne": [
+    {
+      "description": "Wojtek odrobaczył wczoraj wszystkie konie,stwierdzil ze Zara musi dostać leki",
+      "informations": "Stan hodowli: Konie sportowe-Rubin:1;Atlas:2;Flash:3;Zenit:4 Konie hodowlane-Gaja:5;Tina:6;Milka:7;Klementyna:8 Konie rekreacyjne-Tofik:9;Samba:10;Zara:11;Bryza:12 Źrebaki-Perełka:13;Figa:14;Mgiełka:15 Kowale-Mateusz Król:1 Weterynarze-Wojciech Bryś:1;Dominika Pawlak:2 Dzisiaj jest 12.04.2025",
+      "output": "{ \"konieId\": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-04-11\", \"dataWaznosci\": \"2025-10-11\", \"rodzajZdarzenia\": \"Odrobaczanie\", \"opisZdarzenia\": \"Zara musiala dostac leki\" }"
+    },
+    {
+      "description": "Dodaj mi prosze informacje ze Patrycja zaszczepiła tydzień temu Neona",
+      "informations": "Stan hodowli: Konie sportowe-Neon:1 Konie hodowlane-Kleo:2;Aura:3 Konie rekreacyjne-Borys:4;Nela:5;Czarek:6 Źrebaki-Zefir:7;Mała:8;Leo:9 Kowale-Michał Kowalski:1;Radosław Kowal:2 Weterynarze-Patrycja Lewandowska:1 Dzisiaj jest 12.02.2025",
+      "output": "{ \"konieId\": [1], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-02-05\", \"dataWaznosci\": \"2025-08-05\", \"rodzajZdarzenia\": \"Szczepienie\" }"
+    },
+    {
+      "description": "Konie Hodowlane dostały dziś od Ani Selen",
+      "informations": "Stan hodowli: Konie sportowe-Hektor:1;Radar:2;Orion:3 Konie hodowlane-Mira:4;Gaja:5;Klementyna:6;Róża:7 Konie rekreacyjne-Lori:8;Merlin:9;Felka:10 Źrebaki-Iskra:11;Plamka:12;Drops:13;Tosia:14 Kowale-Bartek Mądry:1 Weterynarze-Marcin Grzelak:1;Anna Kamińska:2 Dzisiaj jest12.05.2025",
+      "output": "{ \"konieId\": [4,5,6,7], \"weterynarz\": 2, \"dataZdarzenia\": \"2025-05-12\", \"dataWaznosci\": \"2025-11-12\", \"rodzajZdarzenia\": \"Podanie suplementów\", \"opisZdarzenia\": \"Podano Selen\" }"
+    },
+    {
+      "description": "Żuk zaszczpił dziś Błyska",
+      "informations": "Stan hodowli: Konie sportowe-Błysk:1;Cyklon:2;Wicher:3;Simba:4;Flash:5 Konie hodowlane-Selena:6;Fanta:7;Milka:8;Aura:9;Bella:10 Konie rekreacyjne-Bambi:11;Czarek:12;Tofik:13;Mustang:14;Luzak:15 Źrebaki-Zefir:16;Figa:17;Oliwka:18;Leo:19;Mgiełka:20 Kowale-Karol Buczek:1;Wiktor Machowski:2;Paweł Kaczmarek:3 Weterynarze-Ewelina Maj:1;Hanna Wrona:2;Tomasz Żuk:3 Dzisiaj jest 14.04.2025",
+      "output": "{ \"konieId\": [1], \"weterynarz\": 3, \"dataZdarzenia\": \"2025-04-14\", \"dataWaznosci\": \"2025-10-14\", \"rodzajZdarzenia\": \"Szczepienie\" }"
+    }
+  ]
+}
