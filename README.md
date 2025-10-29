@@ -21,7 +21,7 @@ python eval_classifier.py --intents intents.json --testset testset.json [--rebui
 uv venv
 source .venv/bin/activate # bash, linux
 .venv/bin/activate.ps1 # powershell, windows
-uv sync
+uv sync --extra "cpu" # albo cuda (karty NVIDIA), rocm (karty AMD)
 python eval_classifier.py --intents intents.json --testset testset.json
 ```
 
@@ -29,7 +29,7 @@ python eval_classifier.py --intents intents.json --testset testset.json
 
 Run the server: 
 ```
-uvicorn main:app --reload
+uv run uvicorn main:app --reload
 ```
 
 Access the documentation at: <http://127.0.0.1:8000/docs>

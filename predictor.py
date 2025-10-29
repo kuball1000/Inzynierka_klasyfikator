@@ -48,5 +48,7 @@ def predict_from_text(txt: str) -> str:
     if INDEX is None or INTENTS is None:
         load_index(force_rebuild=False)
 
+    assert INDEX is not None
+    assert INTENTS is not None
     out = predict_endpoint(txt, INDEX, intents=INTENTS)
     return norm_ep(out.get("endpoint", ""))
