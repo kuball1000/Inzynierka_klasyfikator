@@ -21,7 +21,7 @@ python eval_classifier.py --intents intents.json --testset testset.json [--rebui
 uv venv
 source .venv/bin/activate # bash, linux
 .venv/bin/activate.ps1 # powershell, windows
-uv sync --extra "cpu" # albo cuda (karty NVIDIA), rocm (karty AMD)
+uv sync --group=prod --group=dev --extra=cpu  # albo cuda (karty NVIDIA), rocm (karty AMD)
 python eval_classifier.py --intents intents.json --testset testset.json
 ```
 
