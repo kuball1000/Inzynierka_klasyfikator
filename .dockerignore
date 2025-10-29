@@ -1,0 +1,11 @@
+intent_embeddings.npz
+__pycache__/*
+.venv/*
+.gitignore
+.git
+README.md
+test*.txt
+.dockerignore
+Dockerfile
+docker-compose.yml
+docker-bake.hcl

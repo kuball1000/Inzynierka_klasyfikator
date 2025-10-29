@@ -1,11 +1,73 @@
 [project]
 name = "inzynierka-klasyfikator"
 version = "0.1.0"
-description = "Add your description here"
+description = "Word embedding transformer for predicting the possible endpoint from Konie API for a given insert query"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
+[dependency-groups]
+prod = [
+    "fastapi[standard]>=0.119.0",
     "numpy>=2.3.3",
+    "pydantic>=2.12.0",
     "scikit-learn>=1.7.2",
     "sentence-transformers>=5.1.1",
+    "typing>=3.10.0.0",
 ]
+dev = [
+    "uvicorn[standard]>=0.37.0",
+]
+# https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies
+
+[project.optional-dependencies]
+cpu = [
+  "torch>=2.9.0",
+  # "torchvision>=0.22.0",
+]
+cuda = [
+  "torch>=2.9.0",
+  # "torchvision>=0.22.0",
+]
+rocm = [
+  "torch>=2.9.0",
+  # "torchvision>=0.22.0",
+  "pytorch-triton-rocm>=3.5.0",
+]
+
+[tool.uv]
+conflicts = [
+  [
+    { extra = "cpu" },
+    { extra = "cuda" },
+    { extra = "rocm" },
+  ],
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu128", extra = "cuda" },
+  { index = "pytorch-rocm6.4", extra = "rocm" },
+]
+# torchvision = [
+#  { index = "pytorch-cpu", extra = "cpu" },
+#  { index = "pytorch-cu128", extra = "cuda" },
+#  { index = "pytorch-rocm6.4", extra = "rocm" },
+# ]
+pytorch-triton-rocm = [
+  { index = "pytorch-rocm6.4", extra = "rocm" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-rocm6.4"
+url = "https://download.pytorch.org/whl/rocm6.4"
+explicit = true
