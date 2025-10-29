@@ -1,5 +1,5 @@
 ARG PYTHON_VERSION=3.12
-FROM ghcr.io/astral-sh/uv:python${PYTHON_VERSION}-trixie-slim
+FROM ghcr.io/astral-sh/uv:python${PYTHON_VERSION}-trixie-slim AS klasyfikator-build
 
 RUN groupadd --system --gid 1000 nonroot \
  && useradd --system --gid 1000 --uid 1000 --create-home nonroot
@@ -26,7 +26,7 @@ ARG PLATFORM_EXTRA=cpu
 # Installing without the uv.lock temporarily to resolve building for different platforms
 RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
-    uv sync --no-dev --extra=${PLATFORM_EXTRA}
+    uv sync --no-dev --group=prod --extra=${PLATFORM_EXTRA}
 # RUN --mount=type=cache,target=/root/.cache/uv \
 #     uv sync --locked --no-dev --extra=${PLATFORM_EXTRA}
 
