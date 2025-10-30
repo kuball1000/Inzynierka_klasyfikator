@@ -3,7 +3,7 @@ services:
     build:
       context: ./
     container_name: "${ENV_NAME}-klasyfikator"
-    image: "ghcr.io/kuball1000/Inzynierka_klasyfikator/klasyfikator:${BRANCH}"
+    image: "ghcr.io/kuball1000/inzynierka_klasyfikator/klasyfikator:${BRANCH}"
     env_file: 
       - path: .env
         required: false
