@@ -11,10 +11,14 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.${ENV_NAME}-klasyfikator.rule=Host(`${DOMAIN}`) && PathPrefix(`/klasyfikator`)"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.rule=Host(`${DOMAIN}`) && PathPrefix(`${PATH_PREFIX}`)"
       - "traefik.http.routers.${ENV_NAME}-klasyfikator.entrypoints=https"
       - "traefik.http.routers.${ENV_NAME}-klasyfikator.tls=true"
       - "traefik.http.routers.${ENV_NAME}-klasyfikator.tls.certResolver=myresolver"
+      - "traefik.http.services.${ENV_NAME}-klasyfikator.loadbalancer.server.port=8000"
+      - "traefik.http.middlewares.${ENV_NAME}-klasyfikator-stripprefix.stripPrefix.prefixes=${PATH_PREFIX}"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.middlewares=${ENV_NAME}-klasyfikator-stripprefix"
+    command: 'fastapi run main.py --port 8000 --proxy-headers --forwarded-allow-ips="*" --root-path ${PATH_PREFIX}'
     restart: always
 networks:
   traefik:
