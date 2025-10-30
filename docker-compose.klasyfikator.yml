@@ -1,0 +1,21 @@
+services:
+  klasyfikator:
+    build:
+      context: ./
+    container_name: "${ENV_NAME}-klasyfikator"
+    image: "ghcr.io/kuball1000/Inzynierka_klasyfikator/klasyfikator:${BRANCH}"
+    env_file: 
+      - path: .env
+        required: false
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.rule=Host(`${DOMAIN}`) && PathPrefix(`/klasyfikator`)"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.entrypoints=https"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.tls=true"
+      - "traefik.http.routers.${ENV_NAME}-klasyfikator.tls.certResolver=myresolver"
+    restart: always
+networks:
+  traefik:
+    external: true

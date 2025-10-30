@@ -1,0 +1,60 @@
+- name: Deploy using docker images
+  vars:
+    dockercompose: "{{ playbook_dir }}/../../../docker-compose.klasyfikator.yml"
+  hosts: main
+  tasks:
+    - name: Get directory
+      ansible.builtin.set_fact:
+        dest: "{{ lookup('env', 'DIRECTORY') }}"
+
+    - name: Create project directory
+      ansible.builtin.file:
+        path: "{{ dest }}"
+        state: directory
+        mode: "0777"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+      become: true
+
+    - name: Copy docker-compose.yml
+      ansible.builtin.copy:
+        src: "{{ dockercompose }}"
+        dest: "{{ dest }}/docker-compose.yml"
+        mode: "0660"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        force: true
+      become: true
+
+    # TODO: Setup versioned secrets object storage in the future
+    - name: Setup .env
+      ansible.builtin.copy:
+        dest: "{{ dest }}/.env"
+        content: |
+          {{ lookup('env', 'ENV_FILE') }}
+        mode: "0600"
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+      become: true
+
+    - name: Pull services
+      community.docker.docker_compose_v2_pull:
+        project_src: "{{ dest }}"
+
+    - name: Start services
+      community.docker.docker_compose_v2:
+        project_src: "{{ dest }}"
+        build: never
+        pull: never
+        recreate: always
+
+    - name: Cleanup images
+      community.docker.docker_prune:
+        images: true
+        containers: true
+        containers_filters:
+          # Don't prune containers who have a DONTPRUNE=true label
+          # label:
+          #   - DONTPRUNE=false
+
+          "label!": DONTPRUNE=true

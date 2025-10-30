@@ -1,0 +1,5 @@
+main:
+  hosts:
+    main:
+      ansible_ssh_user: "{{ lookup('env','ANSIBLE_USER') }}"
+      ansible_host: "{{ lookup('env','ANSIBLE_HOST') }}"
