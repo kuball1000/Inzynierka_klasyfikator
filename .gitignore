@@ -1,3 +1,4 @@
 intent_embeddings.npz
 __pycache__/*
 .venv/*
+.env
