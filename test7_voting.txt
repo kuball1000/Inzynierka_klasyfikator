@@ -1,0 +1,90 @@
+C:/Users/dell/AppData/Local/Programs/Python/Python310/python.exe eval_classifier_voting.py --intents intents.json --testset testset.json
+Loading Voting Classifier resources...
+Loading Index 1 (Centroid)...
+Loading Index 3 (Ensemble KNN)...
+Uruchamianie ewaluacji VOTING CLASSIFIER (C1 + C3)
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.8590
+Precision (micro): 0.8590 | Recall (micro): 0.8590 | F1 (micro): 0.8590
+Precision (macro): 0.8643 | Recall (macro): 0.8562 | F1 (macro): 0.8542
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.9500    0.9500    0.9500        20
+                             api/kowale     0.8333    1.0000    0.9091        20
+                        api/weterynarze     0.9048    0.9500    0.9268        20
+                 api/wydarzenia/choroby     1.0000    0.6500    0.7879        20
+                api/wydarzenia/leczenia     0.7333    0.7857    0.7586        14
+                api/wydarzenia/podkucie     0.9474    0.9000    0.9231        20
+                 api/wydarzenia/rozrody     0.6818    0.7500    0.7143        20
+api/wydarzenia/zdarzenia_profilaktyczne     0.8636    0.8636    0.8636        22
+
+                               accuracy                         0.8590       156
+                              macro avg     0.8643    0.8562    0.8542       156
+                           weighted avg     0.8693    0.8590    0.8580       156
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                           19                            1                            0                            0                
+            0                            0                            0                            0
+                  api/kowale                            0                           20                            0                            0                
+            0                            0                            0                            0
+             api/weterynarze                            0                            1                           19                            0                
+            0                            0                            0                            0
+      api/wydarzenia/choroby                            0                            0                            0                           13                
+            4                            0                            2                            1
+     api/wydarzenia/leczenia                            0                            0                            0                            0                
+           11                            0                            2                            1
+     api/wydarzenia/podkucie                            0                            1                            0                            0                
+            0                           18                            1                            0
+      api/wydarzenia/rozrody                            0                            1                            2                            0                
+            0                            1                           15                            1
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            0                            0                            0                            0                            2                           19
+
+=== STATYSTYKI SCORE ===
+Średni score poprawnych: 0.9245
+Średni score błędnych:   0.8999
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10 NAJNIŻSZYCH SCORE) ===
+- text: Wpisz poród u Sławy sprzed dwóch dni, pomagała Lidia Tomczak.
+  true: api/wydarzenia/rozrody
+  pred: api/kowale (method=voting_score_c1, score=0.8735)
+
+- text: Trzeba odrobaczyć Furię, wpisz to na za tydzień, zajmie się tym Tomasz Żuk.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/konie (method=voting_score_c3, score=0.8809999823570251)
+
+- text: Dodaj podanie elektrolitów Herkulesowi po wczorajszym treningu, zrobiła to Ania Kamińska.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=voting_score_c1, score=0.8821)
+
+- text: Dzisiaj Andrzej Duda podkuwał Herkulesa, Simbę i Lunę.
+  true: api/wydarzenia/podkucie
+  pred: api/wydarzenia/rozrody (method=voting_score_c1, score=0.8855)
+
+- text: Trzy tygodnie temu u Zefira wykryto pasożyty. Proszę dodać ten wpis.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/zdarzenia_profilaktyczne (method=voting_score_c1, score=0.8859)
+
+- text: Wpisz termin ściągnięcia szwów
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=voting_score_c3, score=0.8880000114440918)
+
+- text: Wrzody u Odi zostały wyleczone. Dodaj datę zakończenia na dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=voting_agreement (c1=0.8916, c3=0.8986999988555908), score=0.8986999988555908)
+
+- text: Zanotuj dzisiejsze odrobaczanie źrebaków przez Ewelinę Maj, wszystko poszło gładko.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=voting_agreement (c1=0.8983, c3=0.8988999724388123), score=0.8988999724388123)
+
+- text: Zapisz, że Furia od tygodnia ma gorączkę.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/rozrody (method=voting_score_c1, score=0.901)
+
+- text: Wpisz, że Róża znowu zaczęła kuleć na prawy przód. Zaczęło się dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=voting_score_c1, score=0.9033)
+

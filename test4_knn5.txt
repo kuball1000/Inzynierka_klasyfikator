@@ -1,0 +1,84 @@
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.8910
+Precision (micro): 0.8910 | Recall (micro): 0.8910 | F1 (micro): 0.8910
+Precision (macro): 0.8925 | Recall (macro): 0.8869 | F1 (macro): 0.8864
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.9091    1.0000    0.9524        20
+                             api/kowale     0.9091    1.0000    0.9524        20
+                        api/weterynarze     0.8636    0.9500    0.9048        20
+                 api/wydarzenia/choroby     1.0000    0.7500    0.8571        20
+                api/wydarzenia/leczenia     0.8462    0.7857    0.8148        14
+                api/wydarzenia/podkucie     0.9000    0.9000    0.9000        20
+                 api/wydarzenia/rozrody     0.8421    0.8000    0.8205        20
+api/wydarzenia/zdarzenia_profilaktyczne     0.8696    0.9091    0.8889        22
+
+                               accuracy                         0.8910       156
+                              macro avg     0.8925    0.8869    0.8864       156
+                           weighted avg     0.8939    0.8910    0.8891       156
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                           20                            0                            0                            0                
+            0                            0                            0                            0
+                  api/kowale                            0                           20                            0                            0                
+            0                            0                            0                            0
+             api/weterynarze                            0                            1                           19                            0                
+            0                            0                            0                            0
+      api/wydarzenia/choroby                            1                            0                            0                           15                
+            2                            1                            0                            1
+     api/wydarzenia/leczenia                            0                            0                            0                            0                
+           11                            0                            2                            1
+     api/wydarzenia/podkucie                            0                            1                            0                            0                
+            0                           18                            0                            1
+      api/wydarzenia/rozrody                            0                            0                            3                            0                
+            0                            1                           16                            0
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            0                            0                            0                            0                            1                           20
+
+=== STATYSTYKI SCORE ===
+Średni score poprawnych: 0.9224
+Średni score błędnych:   0.9007
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10 NAJNIŻSZYCH SCORE) ===
+- text: Zakończ chorobę Grot. Chorował na grypę od 7 do 23 kwietnia.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/zdarzenia_profilaktyczne (method=knn_semantic_k5, score=0.8690999746322632)
+
+- text: Trzeba odrobaczyć Furię, wpisz to na za tydzień, zajmie się tym Tomasz Żuk.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/konie (method=knn_semantic_k5, score=0.8809999823570251)
+
+- text: 15 października wszystkie konie rekreacyjne miały robione kopyta przez Piotra Węglarskiego.
+  true: api/wydarzenia/podkucie
+  pred: api/wydarzenia/zdarzenia_profilaktyczne (method=knn_semantic_k5, score=0.8880000114440918)
+
+- text: Wpisz termin ściągnięcia szwów
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=knn_semantic_k5, score=0.8880000114440918)
+
+- text: Wrzody u Odi zostały wyleczone. Dodaj datę zakończenia na dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=knn_semantic_k5, score=0.8986999988555908)
+
+- text: Zanotuj dzisiejsze odrobaczanie źrebaków przez Ewelinę Maj, wszystko poszło gładko.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=knn_semantic_k5, score=0.8988999724388123)
+
+- text: Zarejestruj wczorajszą wizytę u Jokera, weterynarz Grzegorz Żuchowski, opis: 'Ogólna kontrola stanu rozrodczego'.
+  true: api/wydarzenia/rozrody
+  pred: api/weterynarze (method=knn_semantic_k5, score=0.9017999768257141)
+
+- text: Wpisz, że Róża znowu zaczęła kuleć na prawy przód. Zaczęło się dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/podkucie (method=knn_semantic_k5, score=0.9020000100135803)
+
+- text: Dodaj informację o założeniu opatrunku
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=knn_semantic_k5, score=0.90420001745224)
+
+- text: Proszę odnotować, że 1 października cała stajnia była podkuta przez Michała Kowalskiego.
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=knn_semantic_k5, score=0.9042999744415283)

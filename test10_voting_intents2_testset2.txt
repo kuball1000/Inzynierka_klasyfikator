@@ -1,0 +1,90 @@
+eval_classifier_voting.py --intents intents2.json --testset testset2.json 
+Loading Voting Classifier resources...
+Loading Index 1 (Centroid)...
+Loading Index 3 (Ensemble KNN)...
+Uruchamianie ewaluacji VOTING CLASSIFIER (C1 + C3)
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.8494
+Precision (micro): 0.8494 | Recall (micro): 0.8494 | F1 (micro): 0.8494
+Precision (macro): 0.8523 | Recall (macro): 0.8466 | F1 (macro): 0.8462
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.9444    0.8500    0.8947        40
+                             api/kowale     0.7843    1.0000    0.8791        40
+                        api/weterynarze     0.9024    0.9250    0.9136        40
+                 api/wydarzenia/choroby     0.9167    0.8250    0.8684        40
+                api/wydarzenia/leczenia     0.7778    0.7500    0.7636        28
+                api/wydarzenia/podkucie     0.8421    0.8000    0.8205        40
+                 api/wydarzenia/rozrody     0.7556    0.8500    0.8000        40
+api/wydarzenia/zdarzenia_profilaktyczne     0.8947    0.7727    0.8293        44
+
+                               accuracy                         0.8494       312
+                              macro avg     0.8523    0.8466    0.8462       312
+                           weighted avg     0.8557    0.8494    0.8491       312
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                           34                            5                            0                            0                
+            0                            0                            1                            0
+                  api/kowale                            0                           40                            0                            0                
+            0                            0                            0                            0
+             api/weterynarze                            0                            3                           37                            0                
+            0                            0                            0                            0
+      api/wydarzenia/choroby                            0                            0                            1                           33                
+            3                            2                            1                            0
+     api/wydarzenia/leczenia                            0                            0                            0                            2                
+           21                            0                            3                            2
+     api/wydarzenia/podkucie                            0                            2                            1                            1                
+            1                           32                            1                            2
+      api/wydarzenia/rozrody                            1                            1                            1                            0                
+            0                            3                           34                            0
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            1                            0                            2                            1                            5                           34
+
+=== STATYSTYKI SCORE ===
+Średni score poprawnych: 0.9337
+Średni score błędnych:   0.9123
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10 NAJNIŻSZYCH SCORE) ===
+- text: Dodaj alergię oddechową u Szeryfa.
+  true: api/wydarzenia/choroby
+  pred: api/weterynarze (method=voting_trust_c3_high_score, score=0.8788999915122986)
+
+- text: Zaplanuj struganie dla kucyków na piątek.
+  true: api/wydarzenia/podkucie
+  pred: api/weterynarze (method=voting_trust_c3_high_score, score=0.885200023651123)
+
+- text: Wpisz wczorajsze badania profilaktyczne Radara przeprowadzone przez Hannę Wronę.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=voting_trust_c3_high_score, score=0.885699987411499)
+
+- text: Zarejestruj wizytę dietetyka dla Cienia.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/weterynarze (method=voting_trust_c3_high_score, score=0.8876000046730042)
+
+- text: Zarejestruj zapalenie oka u kuca.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=voting_trust_c3_high_score, score=0.8924000263214111)
+
+- text: Proszę dodać klacz o imieniu Iskra do listy.
+  true: api/konie
+  pred: api/wydarzenia/rozrody (method=voting_trust_c3_high_score, score=0.89410001039505)
+
+- text: Dodaj informację o tarnikowaniu zębów u Szeryfa.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=voting_trust_c3_high_score, score=0.8952000141143799)
+
+- text: Zarejestruj pobranie nasienia od Magnusa.
+  true: api/wydarzenia/rozrody
+  pred: api/kowale (method=voting_trust_c3_high_score, score=0.8964999914169312)
+
+- text: Przyjechał do nas kucyk Piegus, dodaj go.
+  true: api/konie
+  pred: api/kowale (method=voting_trust_c3_high_score, score=0.8977000117301941)
+
+- text: Dodaj nowe podkuwanie dla Dragona.
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=voting_trust_c3_high_score, score=0.9002000093460083)
+

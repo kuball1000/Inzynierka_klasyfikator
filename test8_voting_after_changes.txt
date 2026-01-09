@@ -1,0 +1,89 @@
+Loading Voting Classifier resources...
+Loading Index 1 (Centroid)...
+Loading Index 3 (Ensemble KNN)...
+Uruchamianie ewaluacji VOTING CLASSIFIER (C1 + C3)
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.8974
+Precision (micro): 0.8974 | Recall (micro): 0.8974 | F1 (micro): 0.8974
+Precision (macro): 0.8976 | Recall (macro): 0.8931 | F1 (macro): 0.8923
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.9091    1.0000    0.9524        20
+                             api/kowale     0.9091    1.0000    0.9524        20
+                        api/weterynarze     0.8261    0.9500    0.8837        20
+                 api/wydarzenia/choroby     1.0000    0.8000    0.8889        20
+                api/wydarzenia/leczenia     0.8462    0.7857    0.8148        14
+                api/wydarzenia/podkucie     0.9048    0.9500    0.9268        20
+                 api/wydarzenia/rozrody     0.8333    0.7500    0.7895        20
+api/wydarzenia/zdarzenia_profilaktyczne     0.9524    0.9091    0.9302        22
+
+                               accuracy                         0.8974       156
+                              macro avg     0.8976    0.8931    0.8923       156
+                           weighted avg     0.9003    0.8974    0.8958       156
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                           20                            0                            0                            0                
+            0                            0                            0                            0
+                  api/kowale                            0                           20                            0                            0                
+            0                            0                            0                            0
+             api/weterynarze                            0                            1                           19                            0                
+            0                            0                            0                            0
+      api/wydarzenia/choroby                            1                            0                            0                           16                
+            2                            1                            0                            0
+     api/wydarzenia/leczenia                            0                            0                            0                            0                
+           11                            0                            2                            1
+     api/wydarzenia/podkucie                            0                            1                            0                            0                
+            0                           19                            0                            0
+      api/wydarzenia/rozrody                            0                            0                            4                            0                
+            0                            1                           15                            0
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            0                            0                            0                            0                            1                           20
+
+=== STATYSTYKI SCORE ===
+Średni score poprawnych: 0.9227
+Średni score błędnych:   0.9039
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10 NAJNIŻSZYCH SCORE) ===
+- text: Trzeba odrobaczyć Furię, wpisz to na za tydzień, zajmie się tym Tomasz Żuk.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/konie (method=voting_trust_c3_high_score, score=0.8809999823570251)
+
+- text: Wpisz termin ściągnięcia szwów
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=voting_trust_c3_high_score, score=0.8880000114440918)
+
+- text: Wrzody u Odi zostały wyleczone. Dodaj datę zakończenia na dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=voting_agreement, score=0.8986999988555908)
+
+- text: Zanotuj dzisiejsze odrobaczanie źrebaków przez Ewelinę Maj, wszystko poszło gładko.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=voting_agreement, score=0.8988999724388123)
+
+- text: Zarejestruj wczorajszą wizytę u Jokera, weterynarz Grzegorz Żuchowski, opis: 'Ogólna kontrola stanu rozrodczego'.
+  true: api/wydarzenia/rozrody
+  pred: api/weterynarze (method=voting_trust_c3_high_score, score=0.9017999768257141)
+
+- text: Wpisz, że Róża znowu zaczęła kuleć na prawy przód. Zaczęło się dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/podkucie (method=voting_trust_c3_high_score, score=0.9020000100135803)
+
+- text: Dodaj informację o założeniu opatrunku
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=voting_agreement, score=0.90420001745224)
+
+- text: Proszę odnotować, że 1 października cała stajnia była podkuta przez Michała Kowalskiego.
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=voting_agreement, score=0.9042999744415283)
+
+- text: Dodaj wpis dla Iskry: dzisiaj, otarcie od popręgu.
+  true: api/wydarzenia/choroby
+  pred: api/konie (method=voting_trust_c3_high_score, score=0.904699981212616)
+
+- text: Dodaj zdarzenie 'Inne' dla Gladiatora: 'Konsultacja rozrodcza' z wczorajszą datą, weterynarz Sandra Pietrzak.
+  true: api/wydarzenia/rozrody
+  pred: api/weterynarze (method=voting_agreement, score=0.9071000218391418)
+

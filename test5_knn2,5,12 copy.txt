@@ -1,0 +1,85 @@
+Uruchamianie ewaluacji ENSEMBLE K=[2,5,12]
+=== WYNIKI OGÓLNE ===
+Accuracy: 0.8910
+Precision (micro): 0.8910 | Recall (micro): 0.8910 | F1 (micro): 0.8910
+Precision (macro): 0.8923 | Recall (macro): 0.8874 | F1 (macro): 0.8871
+
+=== RAPORT PER-ENDPOINT ===
+                                         precision    recall  f1-score   support
+
+                              api/konie     0.9524    1.0000    0.9756        20
+                             api/kowale     0.9091    1.0000    0.9524        20
+                        api/weterynarze     0.8261    0.9500    0.8837        20
+                 api/wydarzenia/choroby     1.0000    0.8000    0.8889        20
+                api/wydarzenia/leczenia     0.8462    0.7857    0.8148        14
+                api/wydarzenia/podkucie     0.9048    0.9500    0.9268        20
+                 api/wydarzenia/rozrody     0.7500    0.7500    0.7500        20
+api/wydarzenia/zdarzenia_profilaktyczne     0.9500    0.8636    0.9048        22
+
+                               accuracy                         0.8910       156
+                              macro avg     0.8923    0.8874    0.8871       156
+                           weighted avg     0.8948    0.8910    0.8901       156
+
+
+=== MACIERZ POMYŁEK ===
+                   true\pred                    api/konie                   api/kowale              api/weterynarze       api/wydarzenia/choroby      api/wydarzenia/leczenia      api/wydarzenia/podkucie       api/wydarzenia/rozrody api/wydarzenia/zdarzenia_profilaktyczne
+                   api/konie                           20                            0                            0                            0                
+            0                            0                            0                            0
+                  api/kowale                            0                           20                            0                            0                
+            0                            0                            0                            0
+             api/weterynarze                            0                            1                           19                            0                
+            0                            0                            0                            0
+      api/wydarzenia/choroby                            0                            0                            0                           16                
+            2                            1                            1                            0
+     api/wydarzenia/leczenia                            0                            0                            0                            0                
+           11                            0                            2                            1
+     api/wydarzenia/podkucie                            0                            1                            0                            0                
+            0                           19                            0                            0
+      api/wydarzenia/rozrody                            0                            0                            4                            0                
+            0                            1                           15                            0
+api/wydarzenia/zdarzenia_profilaktyczne                            1                            0                            0                            0                            0                            0                            2                           19
+
+=== STATYSTYKI SCORE ===
+Średni score poprawnych: 0.9230
+Średni score błędnych:   0.9026
+
+=== PRZYKŁADOWE BŁĘDY (TOP-10 NAJNIŻSZYCH SCORE) ===
+- text: Trzeba odrobaczyć Furię, wpisz to na za tydzień, zajmie się tym Tomasz Żuk.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/konie (method=ensemble_votes_k2512, score=0.8809999823570251)
+
+- text: Dodaj podanie elektrolitów Herkulesowi po wczorajszym treningu, zrobiła to Ania Kamińska.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=ensemble_votes_k2512, score=0.882099986076355)
+
+- text: Wpisz termin ściągnięcia szwów
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=ensemble_votes_k2512, score=0.8880000114440918)
+
+- text: Wrzody u Odi zostały wyleczone. Dodaj datę zakończenia na dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/leczenia (method=ensemble_votes_k2512, score=0.8986999988555908)
+
+- text: Zanotuj dzisiejsze odrobaczanie źrebaków przez Ewelinę Maj, wszystko poszło gładko.
+  true: api/wydarzenia/zdarzenia_profilaktyczne
+  pred: api/wydarzenia/rozrody (method=ensemble_votes_k2512, score=0.8988999724388123)
+
+- text: Zarejestruj wczorajszą wizytę u Jokera, weterynarz Grzegorz Żuchowski, opis: 'Ogólna kontrola stanu rozrodczego'.
+  true: api/wydarzenia/rozrody
+  pred: api/weterynarze (method=ensemble_votes_k2512, score=0.9017999768257141)
+
+- text: Wpisz, że Róża znowu zaczęła kuleć na prawy przód. Zaczęło się dzisiaj.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/podkucie (method=ensemble_votes_k2512, score=0.9020000100135803)
+
+- text: Dodaj informację o założeniu opatrunku
+  true: api/wydarzenia/leczenia
+  pred: api/wydarzenia/rozrody (method=ensemble_votes_k2512, score=0.90420001745224)
+
+- text: Proszę odnotować, że 1 października cała stajnia była podkuta przez Michała Kowalskiego.
+  true: api/wydarzenia/podkucie
+  pred: api/kowale (method=ensemble_votes_k2512, score=0.9042999744415283)
+
+- text: Dodaj wpis dla Iskry: dzisiaj, otarcie od popręgu.
+  true: api/wydarzenia/choroby
+  pred: api/wydarzenia/rozrody (method=ensemble_votes_k2512, score=0.9056000113487244)

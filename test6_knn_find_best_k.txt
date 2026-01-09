@@ -1,0 +1,29 @@
+Evaluating K from 2 to 20...
+K= 2 -> Accuracy: 0.8654 | F1 Macro: 0.8595
+K= 3 -> Accuracy: 0.8782 | F1 Macro: 0.8746
+K= 4 -> Accuracy: 0.8846 | F1 Macro: 0.8784
+K= 5 -> Accuracy: 0.8910 | F1 Macro: 0.8864
+K= 6 -> Accuracy: 0.8910 | F1 Macro: 0.8877
+K= 7 -> Accuracy: 0.8590 | F1 Macro: 0.8556
+K= 8 -> Accuracy: 0.8526 | F1 Macro: 0.8504
+K= 9 -> Accuracy: 0.8526 | F1 Macro: 0.8483
+K=10 -> Accuracy: 0.8718 | F1 Macro: 0.8705
+K=11 -> Accuracy: 0.8590 | F1 Macro: 0.8580
+K=12 -> Accuracy: 0.8654 | F1 Macro: 0.8639
+K=13 -> Accuracy: 0.8462 | F1 Macro: 0.8443
+K=14 -> Accuracy: 0.8333 | F1 Macro: 0.8298
+K=15 -> Accuracy: 0.8269 | F1 Macro: 0.8253
+K=16 -> Accuracy: 0.8269 | F1 Macro: 0.8253
+K=17 -> Accuracy: 0.8397 | F1 Macro: 0.8390
+K=18 -> Accuracy: 0.8333 | F1 Macro: 0.8346
+K=19 -> Accuracy: 0.8269 | F1 Macro: 0.8300
+K=20 -> Accuracy: 0.8205 | F1 Macro: 0.8227
+
+Top 5 K configurations:
+1. K=6 (Acc: 0.8910, F1: 0.8877)
+2. K=5 (Acc: 0.8910, F1: 0.8864)
+3. K=4 (Acc: 0.8846, F1: 0.8784)
+4. K=3 (Acc: 0.8782, F1: 0.8746)
+5. K=10 (Acc: 0.8718, F1: 0.8705)
+
+Recommended Ensemble K list: [3, 4, 5, 6, 10]
