@@ -33,7 +33,7 @@ def evaluate_k(k: int, idx, intents, testset) -> dict:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--intents", type=str, default=DEFAULT_INTENTS_JSON)
-    parser.add_argument("--testset", type=str, default="testset.json")
+    parser.add_argument("--testset", type=str, default="testset2.json")
     args = parser.parse_args()
 
     intents = load_intents_from_json(args.intents)
