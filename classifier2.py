@@ -9,7 +9,7 @@ EMBEDDING_MODEL_NAME = "intfloat/multilingual-e5-large-instruct"
 EMB_CACHE_PATH = "intent_embeddings_knn.npz"
 SIM_THRESHOLD = 0.42
 MAYBE_THRESHOLD = 0.32
-DEFAULT_INTENTS_JSON = "intents.json"
+DEFAULT_INTENTS_JSON = "intents2.json"
 DEFAULT_K = 5  # Default K for KNN
 
 _model = None
