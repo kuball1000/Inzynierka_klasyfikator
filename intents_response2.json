@@ -1,0 +1,98 @@
+{
+  "api/konie": [
+    {
+      "description": "dodaj nowego 2 letniego Łatkę, który jest sportowym koniem",
+      "informations": "Dzisiaj 25.01.2026",
+      "output": "{ \"nazwa\": \"Łatka\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2026-01-25\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie sportowe\", \"plec\": \"ogier\", \"file\": false }"
+    },
+    {
+      "description": "Wczoraj przyjechała 3 letnia klacz Giorgia jest koniem chodowlanym",
+      "informations": "Dzisiaj jest 25.01.2026",
+      "output": "{ \"nazwa\": \"Giorgia\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2022, \"dataPrzybyciaDoStajni\": \"2026-01-25\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie hodowlane\", \"plec\": \"klacz\", \"file\": false }"
+    }
+  ],
+  "api/wydarzenia/choroby": [
+    {
+      "description": "Kropek w święto 3 Króli złamał prawą nogę przednią.",
+      "informations": "Stan hodowli: Konie sportowe-Wulkan:1;Tornado:2 Konie hodowlane-Nektar:3;Sahara:4 Konie rekreacyjne-Kropek:5;Ringo:6;Lori:7 Źrebaki-Fado:8 Kowale-Kamil Jagoda:1 Weterynarze-Sylwia Dobek:1 Dzisiaj jest 26.01.2026",
+      "output": "{ \"kon\": 5, \"dataRozpoczecia\": \"2026-01-06\", \"opisZdarzenia\": \"Złamana noga\" }"
+    },
+    {
+      "description": "28 grudnia byłam u weterynarza z Nimbus, Lena powiedziała, że ma duży wrzód na prawej części ciała.",
+      "informations": "Stan hodowli: Konie sportowe-Błysk:1;Mistral:2;Nimbus:3 Konie hodowlane-Wanda:4;Zorza:5;Róża:6;Karma:7 Konie rekreacyjne-Dino:8;Malwa:9 Źrebaki-Ptyś:10;Figiel:11 Kowale-Rafał Wolski:1;Mikołaj Nowak:2 Weterynarze-Lena Osińska:1 Dzisiaj jest 25.01.2026",
+      "output": "{ \"kon\": 6, \"dataRozpoczecia\": \"2025-12-28\", \"opisZdarzenia\": \"Wrzód na prawej części ciała\" }"
+    }
+  ],
+  "api/kowale": [
+    {
+      "description": "kowal Jan Sobociński",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Jan Sobociński\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+    },
+    {
+      "description": "Prosiłbym bardzo o dodanie Mariusza Przybycińskiego, który jest kowalem od wielu lat. Jego nr telefnu to 432-567-876",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Mariusz Przybyciński\", \"numerTelefonu\": \"432567876\", \"hodowla\": 0 }"
+    }
+  ],
+  "api/wydarzenia/podkucie": [
+    {
+      "description": "Dzisiaj Michał podkół mi wszystkie konie rekreacyjne",
+      "informations": "Stan hodowli: Konie sportowe-Gina:2; Konie hodowlane-Luna:3;Tajfun:4 Konie rekreacyjne-Mustang:5;Tolo:6 Źrebaki-Szara:7 Kowale-Michał Kowalski:1;Wiktor Machowski:2 Weterynarze-Darek Nowak:1 Dzsiaj jest 25.01.2026",
+      "output": "{ \"konieId\": [5, 6], \"kowal\": 1, \"dataZdarzenia\": \"2026-01-25\", \"dataRozpoczecia\": \"2026-01-25\", \"dataWaznosci\": \"2026-04-27\" }"
+    },
+    {
+      "description": "Byłem przedwczoraj u Piotrka z Foksem na podkuciu.",
+      "informations": "Stan hodowli: Konie sportowe-Atlas:3;Wicher:1 Konie hodowlane-Kora:2;Rumba:5 Konie rekreacyjne-Foks:4;Bryza:6 Źrebaki-Beryl:2 Kowale-Jan Wrona:2;Piotr Węglarski:3 Weterynarze-Katarzyna Lis:1 Dzisiaj jest 25.01.2026",
+      "output": "{ \"konieId\": [4], \"kowal\": 3, \"dataZdarzenia\": \"2026-01-24\", \"dataRozpoczecia\": \"2026-01-24\", \"dataWaznosci\": \"2026-04-26\" }"
+    }
+  ],
+  "api/wydarzenia/rozrody": [
+    {
+      "description": "Niwusia miała dzisiaj sprawdzanie źrebności. Alicja powiedziała, że wszystko było ok.",
+      "informations": "Stan hodowli: Konie sportowe-Argo:1;Blizzard:2 Konie hodowlane-Niwka:3;Dolina:4 Konie rekreacyjne-Sahara:5;Malibu:6;Dino:7 Źrebaki-Ciapek:8;Figiel:9 Kowale-Kamil Walas:1 Weterynarze-Alicja Dębska:1 Dzisiaj jest 25.01.2026",
+      "output": "{ \"kon\": 3, \"weterynarz\": 1, \"dataZdarzenia\": \"2026-01-25\", \"rodzajZdarzenia\": \"Sprawdzenie źrebności\", \"opisZdarzenia\": \"Ok\" }"
+    },
+    {
+      "description": "Chcę dodać inseminację Nimbusa. Wczoraj byliśmy u Nowińskiego.",
+      "informations": "Stan hodowli: Konie sportowe-Tornado:1;Nimbus:2;Orkan:3 Konie hodowlane-Klarka:4;Polana:5;Zorza:6 Konie rekreacyjne-Fuks:7;Lemon:8 Źrebaki-Marzanna:9 Kowale-Wojciech Roman:1;Bartek Szymczak:2 Weterynarze-Daniel Nowiński:1 Dzisiaj jest 25.01.2026",
+      "output": "{ \"kon\": 2, \"weterynarz\": 1, \"dataZdarzenia\": \"2026-01-24\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+    }
+  ],
+  "api/weterynarze": [
+    {
+      "description": "Weterynarz Marek Przebuźki",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Marek Przebuźki\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+    },
+    {
+      "description": "Dodaj mi Miłosza Skibińskiego, który jest weterynarzem. Jego nr telefnu to 432-567-876",
+      "informations": "",
+      "output": "{ \"imieINazwisko\": \"Miłosz Skibiński\", \"numerTelefonu\": \"432567876\", \"hodowla\": 0 }"
+    }
+  ],
+  "api/wydarzenia/zdarzenia_profilaktyczne": [
+    {
+      "description": "Proszę dodać wpis, że moje konie sportowe miały odrobaczanie u Dominika Pawlaka 12 stycznia. Konie nie miały posożytów, następny przegląd za 5 miesięcy.",
+      "informations": "Stan hodowli: Konie sportowe-Piorun:1;Atlas:2;Simba:3 Konie hodowlane-Kleo:4;Selena:5;Dakota:6;Mira:7 Konie rekreacyjne-Mustang:8;Bryza:9;Felka:10;Merlin:11 Źrebaki-Bąbel:12;Oliwka:13;Figa:14;Zefir:15 Kowale-Rafał Mazur:1;Andrzej Duda:2 Weterynarze-Dominika Pawlak:1 Dzisiaj jest 25.01.2026",
+      "output": "{ \"konieId\": [1,2,3], \"weterynarz\": 1, \"dataZdarzenia\": \"2026-01-12\", \"dataWaznosci\": \"2026-06-12\", \"rodzajZdarzenia\": \"Odrobaczanie\", \"opisZdarzenia\": \"Konie nie miały pasożytów, następny przegląd za 5 miesięcy\" }"
+    },
+    {
+      "description": "Dodaj wizytę u dentysty dla Gracji u Kurowskiej na 23 stycznia.",
+      "informations": "Stan hodowli: Konie sportowe-Piorun:1;Atlas:2 Konie hodowlane-Kora:3;Milka:4;Gracja:5 Konie rekreacyjne-Lori:6;Tofik:7;Czarek:8 Źrebaki-Iskra:9;Figa:10 Kowale-Michał Kowalski:1;Zbigniew Marecki:2 Weterynarze-Karolina Kurowska:1;Dominika Pawlak:2 Dzisiaj jest 25.01.2026",
+      "output": "{ \"konieId\": [5], \"weterynarz\": 1, \"dataZdarzenia\": \"2026-01-23\", \"rodzajZdarzenia\": \"Dentysta\" }"
+    }
+  ],
+  "api/wydarzenia/leczenia": [
+    {
+      "description": "Dodaj do systemu wykonanie zdjęcia RTG klatki piersiowej ogiera Flash przez dr Marcina Grzelaka z powodu duszności.",
+      "informations": "Stan hodowli: Konie sportowe-Orion:1;Flash:2;Skra:3;Gina:4 Konie hodowlane-Rumba:5;Róża:6 Konie rekreacyjne-Samba:7;Mustang:8;Borys:9 Źrebaki-Mgiełka:10;Vega:11;Plamka:12 Kowale-Jan Wrona:1 Weterynarze-Tomasz Żuk:1;Iwona Michalska:2;Marcin Grzelak:3 Choroby-Uraz nogi:5;Problemy z oddychaniem:15;Brak:42;Stan zapalny:43 Dzisiaj jest 25.01.2026 ",
+      "output": "{ \"kon\": 2, \"weterynarz\": 3, \"dataZdarzenia\": \"2026-01-25\", \"choroba\": 15, \"opisZdarzenia\": \"Wykonanie RTG klatki piersiowej\" }"
+    },
+    {
+      "description": "Zapisz wizytę dr Dominika Pawlaka, który badał oczy źrebaka Iskra z powodu podejrzenia infekcji.",
+      "informations": "Stan hodowli: Konie sportowe-Piorun:1;Atlas:2 Konie hodowlane-Kora:3;Milka:4;Gracja:5 Konie rekreacyjne-Lori:6;Nero:7;Czarek:8 Źrebaki-Iskra:9;Figa:10 Kowale-Michał Kowalski:1;Zbigniew Marecki:2 Weterynarze-Karolina Kurowska:1;Dominika Pawlak:2 Choroby-Ciało obce w kopycie:5;Kulawizna:23;Brak:42;Infekcja oka:44 Dzisiaj jest 25.01.2026 ",
+      "output": "{ \"kon\": 9, \"weterynarz\": 2, \"dataZdarzenia\": \"2026-01-25\", \"choroba\": 44, \"opisZdarzenia\": \"Badanie okulistyczne i stwierdzenie infekcji\" }"
+    }
+  ]
+}

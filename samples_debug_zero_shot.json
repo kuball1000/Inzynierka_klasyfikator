@@ -1,0 +1,1625 @@
+[
+  {
+    "i": 1,
+    "text": "Dopisz proszę młodego wałacha Burzę, ma 2 lata i służy do rekreacji\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"body\": {\n    \"nazwa\": \"Burza\",\n    \"rocznikUrodzenia\": 2023,\n    \"rodzajKonia\": \"Konie rekreacyjne\",\n    \"plec\": \"wałach\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Burza",
+      "rocznikUrodzenia": 2023,
+      "rodzajKonia": "Konie rekreacyjne",
+      "plec": "wałach"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": null
+      },
+      "plec": {
+        "expected": "ogier",
+        "generated": "wałach"
+      }
+    },
+    "expected": "{ \"nazwa\": \"Burza\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie rekreacyjne\", \"plec\": \"ogier\", \"file\": false }"
+  },
+  {
+    "i": 2,
+    "text": "Dzisiaj urodził się źrebak Storm, dodaj go do bazy.\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.78,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Storm\",\n    \"rocznikUrodzenia\": 2025,\n    \"rodzajKonia\": \"Źrebaki\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Storm",
+      "rocznikUrodzenia": 2025,
+      "rodzajKonia": "Źrebaki"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Storm\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2025, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Źrebaki\", \"plec\": null, \"file\": false }"
+  },
+  {
+    "i": 3,
+    "text": "Dodaj nowego konia Błyskawica – to 6-letnia klacz, właśnie ją przywiozłem\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.78,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"body\": {\n    \"nazwa\": \"Błyskawica\",\n    \"rocznikUrodzenia\": 2019,\n    \"dataPrzybyciaDoStajni\": \"2025-05-15\",\n    \"rodzajKonia\": \"Konie hodowlane\",\n    \"plec\": \"klacz\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Błyskawica",
+      "rocznikUrodzenia": 2019,
+      "dataPrzybyciaDoStajni": "2025-05-15",
+      "rodzajKonia": "Konie hodowlane",
+      "plec": "klacz"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "rodzajKonia": {
+        "expected": "Konie rekreacyjne",
+        "generated": "Konie hodowlane"
+      }
+    },
+    "expected": "{ \"nazwa\": \"Błyskawica\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2019, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie rekreacyjne\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 4,
+    "text": "Zapisz mi informacje o nowej klaczy w mojej stajni, Błękitna jest 2 letnim koniem hodowlanym.\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.78,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Błękitna\",\n    \"rocznikUrodzenia\": 2023,\n    \"dataPrzybyciaDoStajni\": \"15.05.2025\",\n    \"rodzajKonia\": \"Konie hodowlane\",\n    \"plec\": \"klacz\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Błękitna",
+      "rocznikUrodzenia": 2023,
+      "dataPrzybyciaDoStajni": "15.05.2025",
+      "rodzajKonia": "Konie hodowlane",
+      "plec": "klacz"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": "15.05.2025"
+      }
+    },
+    "expected": "{ \"nazwa\": \"Błękitna\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie hodowlane\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 5,
+    "text": "Proszę dodaj mi nowego 2 letniego konia Tajfuna jest sportowym ogierem\nDzisiaj 14.05.2025",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.78,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"body\": {\n    \"nazwa\": \"Tajfun\",\n    \"rocznikUrodzenia\": 2023,\n    \"rodzajKonia\": \"Konie sportowe\",\n    \"plec\": \"ogier\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Tajfun",
+      "rocznikUrodzenia": 2023,
+      "rodzajKonia": "Konie sportowe",
+      "plec": "ogier"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-14",
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Tajfun\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2023, \"dataPrzybyciaDoStajni\": \"2025-05-14\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie sportowe\", \"plec\": \"ogier\", \"file\": false }"
+  },
+  {
+    "i": 6,
+    "text": "Dzisiaj przywiozłem nową 3 letnią klacz Ginę jest koniem chodowlanym ,dodaj mi ją proszę do hodowli\nDzisiaj jest 15.05.2025",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.78,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"body\": {\n    \"nazwa\": \"Gina\",\n    \"rocznikUrodzenia\": 2022,\n    \"dataPrzybyciaDoStajni\": \"15.05.2025\",\n    \"rodzajKonia\": \"Konie hodowlane\",\n    \"plec\": \"klacz\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Gina",
+      "rocznikUrodzenia": 2022,
+      "dataPrzybyciaDoStajni": "15.05.2025",
+      "rodzajKonia": "Konie hodowlane",
+      "plec": "klacz"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": "15.05.2025"
+      }
+    },
+    "expected": "{ \"nazwa\": \"Gina\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2022, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie hodowlane\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 7,
+    "text": "Dodaj proszę urodzonego u mnie dzisiaj źrebaka furię\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Furia\",\n    \"rocznikUrodzenia\": 2025,\n    \"dataPrzybyciaDoStajni\": \"15.05.2025\",\n    \"rodzajKonia\": \"Źrebaki\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Furia",
+      "rocznikUrodzenia": 2025,
+      "dataPrzybyciaDoStajni": "15.05.2025",
+      "rodzajKonia": "Źrebaki"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": "15.05.2025"
+      },
+      "plec": {
+        "expected": "klacz",
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Furia\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2025, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Źrebaki\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 8,
+    "text": "Mam nowego 3 letniego Wałaha Pioruna w stajni, dodaj go jakko konia sportowego\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.89,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Piorun\",\n    \"rocznikUrodzenia\": 2022,\n    \"rodzajKonia\": \"Konie sportowe\",\n    \"plec\": \"wałach\",\n    \"dataPrzybyciaDoStajni\": \"2025-05-15\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Piorun",
+      "rocznikUrodzenia": 2022,
+      "rodzajKonia": "Konie sportowe",
+      "plec": "wałach",
+      "dataPrzybyciaDoStajni": "2025-05-15"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Piorun\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2022, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie sportowe\", \"plec\": \"wałach\", \"file\": false }"
+  },
+  {
+    "i": 9,
+    "text": "Kupiłem nowego rocznego konia rekraycjnego Figę\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Figa\",\n    \"rocznikUrodzenia\": 2024,\n    \"rodzajKonia\": \"Konie rekreacyjne\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Figa",
+      "rocznikUrodzenia": 2024,
+      "rodzajKonia": "Konie rekreacyjne"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      },
+      "dataPrzybyciaDoStajni": {
+        "expected": "2025-05-15",
+        "generated": null
+      },
+      "plec": {
+        "expected": "klacz",
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Figa\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2024, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie rekreacyjne\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 10,
+    "text": "Kupiłem właśnie 4 letniego ogiera Herkulesa, który będzie służył do zawodów, dodaj go do sportowych\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.89,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Herkules\",\n    \"rocznikUrodzenia\": 2021,\n    \"rodzajKonia\": \"Konie sportowe\",\n    \"plec\": \"ogier\",\n    \"dataPrzybyciaDoStajni\": \"2025-05-15\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Herkules",
+      "rocznikUrodzenia": 2021,
+      "rodzajKonia": "Konie sportowe",
+      "plec": "ogier",
+      "dataPrzybyciaDoStajni": "2025-05-15"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Herkules\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2021, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie sportowe\", \"plec\": \"ogier\", \"file\": false }"
+  },
+  {
+    "i": 11,
+    "text": "Dziś rano przywieziono 5-letnią klacz Lunę do hodowli, proszę ją dodać\nDzisiaj jest 15.05.2025.",
+    "true_ep": "api/konie",
+    "pred_ep": "api/konie",
+    "ep_match": true,
+    "precision": 0.89,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/konie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"nazwa\": \"Luna\",\n    \"rocznikUrodzenia\": 2020,\n    \"dataPrzybyciaDoStajni\": \"2025-05-15\",\n    \"rodzajKonia\": \"Konie hodowlane\",\n    \"plec\": \"klacz\"\n  }\n}\n```",
+    "gemini_json": {
+      "nazwa": "Luna",
+      "rocznikUrodzenia": 2020,
+      "dataPrzybyciaDoStajni": "2025-05-15",
+      "rodzajKonia": "Konie hodowlane",
+      "plec": "klacz"
+    },
+    "diff": {
+      "file": {
+        "expected": false,
+        "generated": null
+      }
+    },
+    "expected": "{ \"nazwa\": \"Luna\", \"numerPrzyzyciowy\": null, \"numerChipa\": null, \"rocznikUrodzenia\": 2020, \"dataPrzybyciaDoStajni\": \"2025-05-15\", \"dataOdejsciaZeStajni\": null, \"rodzajKonia\": \"Konie hodowlane\", \"plec\": \"klacz\", \"file\": false }"
+  },
+  {
+    "i": 12,
+    "text": "Wicher w zeszłym tygodniu złapał grypę\nStan hodowli: Konie sportowe-Grom:1;Wicher:2 Konie hodowlane-Polka:3 Konie rekreacyjne-Mufasa:4;Samba:5;Czarek:6;Mango:7;Lolek:8 Źrebaki-Rino:9;Mini:10 Kowale-Zbigniew Marecki:1 Weterynarze-Iwona Sroka:1 Dzisiaj jest 19.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 2,\n    \"dataRozpoczecia\": \"2025-05-12\",\n    \"opisZdarzenia\": \"Grypa\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 2,
+      "dataRozpoczecia": "2025-05-12",
+      "opisZdarzenia": "Grypa"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-05-19",
+        "generated": "2025-05-12"
+      }
+    },
+    "expected": "{ \"kon\": 2, \"dataRozpoczecia\": \"2025-05-19\", \"opisZdarzenia\": \"Grypa\" }"
+  },
+  {
+    "i": 13,
+    "text": "Czajka wczoraj stwierdziła, że Odi ma wrzody\nStan hodowli: Konie sportowe-Bizon:1;Atlas:2;Gina:3 Konie hodowlane-Rumba:4;Klusia:5;Luna:6;Milka:7 Konie rekreacyjne-Teksas:8;Bryza:9;Odi:10 Źrebaki-Fruzia:11;Iskra:12;Kropka:13;Drops:14 Kowale-Paweł Kaczmarek:1;Tomek Zięba:2 Weterynarze-Aleksandra Czajka:1;Marcin Grzelak:2 Dzisiaj jest 11.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.33,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 10,\n    \"dataRozpoczecia\": \"10.05.2025\",\n    \"opisZdarzenia\": \"Czajka stwierdziła, że Odi ma wrzody\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 10,
+      "dataRozpoczecia": "10.05.2025",
+      "opisZdarzenia": "Czajka stwierdziła, że Odi ma wrzody"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-05-10",
+        "generated": "10.05.2025"
+      },
+      "opisZdarzenia": {
+        "expected": "Wrzody",
+        "generated": "Czajka stwierdziła, że Odi ma wrzody"
+      }
+    },
+    "expected": "{ \"kon\": 10, \"dataRozpoczecia\": \"2025-05-10\", \"opisZdarzenia\": \"Wrzody\" }"
+  },
+  {
+    "i": 14,
+    "text": "Oliwka kuleje na przednią prawa noge\nStan hodowli: Konie sportowe-Neon:1;Radar:2 Konie hodowlane-Kora:3;Gracja:4;Duma:5 Konie rekreacyjne-Bambi:6;Zara:7 Źrebaki-Plamka:8;Leo:9;Oliwka:10 Kowale-Wojciech Wrona:1 Weterynarze-Ewelina Maj:1;Magdalena Mróz:2 Dzisiaj jest 12.03.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 10,\n    \"dataRozpoczecia\": \"2025-03-12\",\n    \"opisZdarzenia\": \"Kuleje na przednią prawą nogę\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 10,
+      "dataRozpoczecia": "2025-03-12",
+      "opisZdarzenia": "Kuleje na przednią prawą nogę"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Kuleje na przednia prawa noge",
+        "generated": "Kuleje na przednią prawą nogę"
+      }
+    },
+    "expected": "{ \"kon\": 10, \"dataRozpoczecia\": \"2025-03-12\", \"opisZdarzenia\": \"Kuleje na przednia prawa noge\" }"
+  },
+  {
+    "i": 15,
+    "text": "Lotosowi wczoraj Karol zdiagnozował pruchnice\nStan hodowli: Konie sportowe-Hektor:1;Tornado:2;Flash:3;Lotos:4 Konie hodowlane-Mira:5;Gaja:6;Nutka:7;Selina:8 Konie rekreacyjne-Felka:9;Samba:10;Czarek:11;Tofik:12;Nela:13 Źrebaki-Zefir:14;Mała:15;Bąbel:16;Iskra:17;Ptyś:18 Kowale-Michał Kowalski:1;Mikołaj Róg:2;Mateusz Król:3 Weterynarze-Anna Kamińska:1;Zofia Bukowska:2;Karol Sienkiewicz:3 Dzisiaj jest 17.02.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 4,\n    \"dataRozpoczecia\": \"2025-02-16\",\n    \"opisZdarzenia\": \"próchnica\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 4,
+      "dataRozpoczecia": "2025-02-16",
+      "opisZdarzenia": "próchnica"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Prochnica",
+        "generated": "próchnica"
+      }
+    },
+    "expected": "{ \"kon\": 4, \"dataRozpoczecia\": \"2025-02-16\", \"opisZdarzenia\": \"Prochnica\" }"
+  },
+  {
+    "i": 16,
+    "text": "Ringo dzisiaj złamał nogę.\nStan hodowli: Konie sportowe-Wulkan:1;Tornado:2 Konie hodowlane-Nektar:3;Sahara:4 Konie rekreacyjne-Kropek:5;Ringo:6;Lori:7 Źrebaki-Fado:8 Kowale-Kamil Jagoda:1 Weterynarze-Sylwia Dobek:1 Dzisiaj jest 15.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 6,\n    \"dataRozpoczecia\": \"2025-05-15\",\n    \"opisZdarzenia\": \"Złamał nogę\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 6,
+      "dataRozpoczecia": "2025-05-15",
+      "opisZdarzenia": "Złamał nogę"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Złamana noga",
+        "generated": "Złamał nogę"
+      }
+    },
+    "expected": "{ \"kon\": 6, \"dataRozpoczecia\": \"2025-05-15\", \"opisZdarzenia\": \"Złamana noga\" }"
+  },
+  {
+    "i": 17,
+    "text": "13 maja byłam u weterynarza z Różą, Lena stwierdziła, że ma wrzody.\nStan hodowli: Konie sportowe-Błysk:1;Mistral:2;Nimbus:3 Konie hodowlane-Wanda:4;Zorza:5;Róża:6;Karma:7 Konie rekreacyjne-Dino:8;Malwa:9 Źrebaki-Ptyś:10;Figiel:11 Kowale-Rafał Wolski:1;Mikołaj Nowak:2 Weterynarze-Lena Osińska:1 Dzisiaj jest 15.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.33,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 6,\n    \"dataRozpoczecia\": \"2025-05-13\",\n    \"opisZdarzenia\": \"wrzody\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 6,
+      "dataRozpoczecia": "2025-05-13",
+      "opisZdarzenia": "wrzody"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-05-15",
+        "generated": "2025-05-13"
+      },
+      "opisZdarzenia": {
+        "expected": "Wrzody",
+        "generated": "wrzody"
+      }
+    },
+    "expected": "{ \"kon\": 6, \"dataRozpoczecia\": \"2025-05-15\", \"opisZdarzenia\": \"Wrzody\" }"
+  },
+  {
+    "i": 18,
+    "text": "Grot chorował od 7 do 23 kwietnia na grypę.\nStan hodowli: Konie sportowe-Grot:1 Konie hodowlane-Amaltea:2;Juna:3 Konie rekreacyjne-Merlin:4;Oreo:5;Tara:6 Źrebaki-Kulka:7;Buba:8 Kowale-Damian Laskowski:1 Weterynarze-Zofia Śliwa:1;Marek Kania:2",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.25,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 1,\n    \"dataRozpoczecia\": \"2023-04-07\",\n    \"dataZakonczenia\": \"2023-04-23\",\n    \"opisZdarzenia\": \"grypa\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 1,
+      "dataRozpoczecia": "2023-04-07",
+      "dataZakonczenia": "2023-04-23",
+      "opisZdarzenia": "grypa"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-04-07",
+        "generated": "2023-04-07"
+      },
+      "opisZdarzenia": {
+        "expected": "Grypa",
+        "generated": "grypa"
+      },
+      "dataZakonczenia": {
+        "expected": "2025-04-23",
+        "generated": "2023-04-23"
+      }
+    },
+    "expected": "{ \"kon\": 1, \"dataRozpoczecia\": \"2025-04-07\", \"dataZakonczenia\": \"2025-04-23\", \"opisZdarzenia\": \"Grypa\" }"
+  },
+  {
+    "i": 19,
+    "text": "Cyklon wczoraj zachorował.\nStan hodowli: Konie sportowe-Wicher:1;Zefir:2;Flash:3;Cyklon:4 Konie hodowlane-Tina:5;Gaja:6;Klementyna:7 Konie rekreacyjne-Bryza:8;Tofik:9;Mustang:10 Źrebaki-Figa:11;Zazu:12;Oliwka:13 Kowale-Wiktor Machowski:1;Kacper Wiśniewski:2 Weterynarze-Anna Kamińska:1;Karol Wrona:2 Dzisiaj jest 11.06.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.33,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"kon\": 4,\n    \"dataRozpoczecia\": \"2025-06-10\",\n    \"opisZdarzenia\": \"Koń zachorował\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 4,
+      "dataRozpoczecia": "2025-06-10",
+      "opisZdarzenia": "Koń zachorował"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-06-11",
+        "generated": "2025-06-10"
+      },
+      "opisZdarzenia": {
+        "expected": null,
+        "generated": "Koń zachorował"
+      }
+    },
+    "expected": "{ \"kon\": 4, \"dataRozpoczecia\": \"2025-06-11\" }"
+  },
+  {
+    "i": 20,
+    "text": "Dwa tygodnie temu weterynarz stwierdził, że mój Meteor ma ochwat.\nStan hodowli: Konie sportowe-Pegaz:1;Nero:2;Meteor:3 Konie hodowlane-Bella:4;Dalia:5 Konie rekreacyjne-Zara:6;Nela:7;Toffi:8;Luzak:9 Źrebaki-Miki:10 Kowale-Jan Wrona:1 Weterynarze-Tomasz Żuk:1;Dominika Maj:2 Dzisiaj jest 17.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 1.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"body\": {\n    \"kon\": 3,\n    \"dataRozpoczecia\": \"2025-05-03\",\n    \"opisZdarzenia\": \"Ochwat\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 3,
+      "dataRozpoczecia": "2025-05-03",
+      "opisZdarzenia": "Ochwat"
+    },
+    "diff": {},
+    "expected": "{ \"kon\": 3, \"dataRozpoczecia\": \"2025-05-03\", \"opisZdarzenia\": \"Ochwat\" }"
+  },
+  {
+    "i": 21,
+    "text": "Romek, dziś przyjechał i swierdził że Iskra ma nadwyrężoną tylną lewą noge\nStan hodowli: Konie sportowe-Tarant:1;Cień:2 Konie hodowlane-Dalia:3;Aura:4;Fanta:5 Konie rekreacyjne-Zyzio:6;Felka:7;Tolo:8 Źrebaki-Perełka:9;Iskra:10 Kowale-Szymon Bocian:1;Bartek Kuc:2;Roman Leśniak:3 Weterynarze-Hanna Nowicka:1 Dzisiaj jest 14.05.2025",
+    "true_ep": "api/wydarzenia/choroby",
+    "pred_ep": "api/wydarzenia/choroby",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/choroby\",\n  \"data\": {\n    \"kon\": 10,\n    \"dataRozpoczecia\": \"2025-05-14\",\n    \"opisZdarzenia\": \"nadwyrężoną tylną lewą nogę\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 10,
+      "dataRozpoczecia": "2025-05-14",
+      "opisZdarzenia": "nadwyrężoną tylną lewą nogę"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Nadwyrężona tylnia lewa noga",
+        "generated": "nadwyrężoną tylną lewą nogę"
+      }
+    },
+    "expected": "{ \"kon\": 10, \"dataRozpoczecia\": \"2025-05-14\", \"opisZdarzenia\": \"Nadwyrężona tylnia lewa noga\" }"
+  },
+  {
+    "i": 22,
+    "text": "Dodaj mi Jakuba Detmera, który jest kowalem",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jakub Detmer\"\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jakub Detmer\"\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Jakub Detmer\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 23,
+    "text": "Hej, dodaj mi kowalika Szymusia Jankowskiego, tel 9855632145",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Szymuś Jankowski\",\n    \"numerTelefonu\": \"9855632145\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "imieINazwisko": "Szymuś Jankowski",
+      "numerTelefonu": "9855632145",
+      "hodowla": 1
+    },
+    "diff": {
+      "hodowla": {
+        "expected": 0,
+        "generated": 1
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Szymuś Jankowski\", \"numerTelefonu\": \"9855632145\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 24,
+    "text": "Dodaj mi kowala Jana Smarowskiego",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jan Smarowski\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jan Smarowski\",\n    \"hodowla\": 1\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Jan Smarowski\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 25,
+    "text": "Prosiłbym o dodanie do mojej hodowli Jana Szweina, który jest kowalem. Jego nr telefnu to 432-567-876",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jan Szwein\",\n    \"numerTelefonu\": \"432-567-876\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "imieINazwisko": "Jan Szwein",
+      "numerTelefonu": "432-567-876",
+      "hodowla": 1
+    },
+    "diff": {
+      "numerTelefonu": {
+        "expected": "432567876",
+        "generated": "432-567-876"
+      },
+      "imieINazwisko": {
+        "expected": "Jan Szweina",
+        "generated": "Jan Szwein"
+      },
+      "hodowla": {
+        "expected": 0,
+        "generated": 1
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Jan Szweina\", \"numerTelefonu\": \"432567876\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 26,
+    "text": "Kowal Marek Jakubia 65-432-43-23",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.33,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Marek Jakubia\",\n    \"numerTelefonu\": \"65-432-43-23\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "imieINazwisko": "Marek Jakubia",
+      "numerTelefonu": "65-432-43-23",
+      "hodowla": 1
+    },
+    "diff": {
+      "numerTelefonu": {
+        "expected": "654324323",
+        "generated": "65-432-43-23"
+      },
+      "hodowla": {
+        "expected": 0,
+        "generated": 1
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Marek Jakubia\", \"numerTelefonu\": \"654324323\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 27,
+    "text": "Dodaj kowala Krzysztof Swędzidziura",
+    "true_ep": "api/kowale",
+    "pred_ep": "api/kowale",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Krzysztof Swędzidziura\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/kowale\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Krzysztof Swędzidziura\",\n    \"hodowla\": 1\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Krzysztof Swędzidziura\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 28,
+    "text": "Dodaj mi prosze informacje o tym ze Brzezinski byl u mnie 17 maja i podkuł wszystkie konie sportowe\nStan hodowli: Konie sportowe-Gina:1;Neon:2;Skra:3 Konie hodowlane-Bella:4;Milka:5;Gracja:6;Aura:7 Konie rekreacyjne-Felka:8;Samba:9;Bambi:10 Źrebaki-Figa:11;Mała:12;Plamka:13 Kowale-Radosław Kowal:1;Hubert Brzeziński:2 Weterynarze-Ewelina Maj:1",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.4,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      1,\n      2,\n      3\n    ],\n    \"kowal\": 2,\n    \"dataZdarzenia\": \"2024-05-17\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        2,
+        3
+      ],
+      "kowal": 2,
+      "dataZdarzenia": "2024-05-17"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-06-28",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-17",
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-17",
+        "generated": "2024-05-17"
+      }
+    },
+    "expected": "{ \"konieId\": [1, 2, 3], \"kowal\": 2, \"dataZdarzenia\": \"2025-05-17\", \"dataRozpoczecia\": \"2025-05-17\", \"dataWaznosci\": \"2025-06-28\" }"
+  },
+  {
+    "i": 29,
+    "text": "Zbysiu dziś podkuł mi wszystkie źrebaki\nStan hodowli: Konie sportowe-Lotos:1;Hektor:2;Tornado:3;Wicher:4 Konie hodowlane-Gaja:5;Róża:6;Klementyna:7 Konie rekreacyjne-Borys:8;Tofik:9;Teksas:10;Kodi:11;Zara:12 Źrebaki-Mgiełka:13;Leo:14;Iskra:15 Kowale-Wiktor Machowski:1;Zbigniew Marecki:2 Weterynarze-Aleksandra Czajka:1 Dzisiaj jest 30.06.2024",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.4,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      13,\n      14,\n      15\n    ],\n    \"kowal\": 2,\n    \"dataZdarzenia\": \"2024-06-30\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        13,
+        14,
+        15
+      ],
+      "kowal": 2,
+      "dataZdarzenia": "2024-06-30"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-09-29",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-06-30",
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-06-30",
+        "generated": "2024-06-30"
+      }
+    },
+    "expected": "{ \"konieId\": [13, 14, 15], \"kowal\": 2, \"dataZdarzenia\": \"2025-06-30\", \"dataRozpoczecia\": \"2025-06-30\", \"dataWaznosci\": \"2025-09-29\" }"
+  },
+  {
+    "i": 30,
+    "text": "Andrzej tydzień temu podkuł Merlina, zapomniałem to dodać zajmij się tym\nStan hodowli: Konie sportowe-Piorun:1;Atlas:5;Simba:14 Konie hodowlane-Kleo:4;Selena:2;Dakota:6;Mira:7 Konie rekreacyjne-Mustang:8;Bryza:9;Felka:10;Merlin:11 Źrebaki-Bąbel:12;Oliwka:3;Figa:13;Zefir:15 Kowale-Rafał Mazur:1;Andrzej Duda:2 Weterynarze-Dominika Pawlak:1 Dzisiaj jest 19.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.6,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      11\n    ],\n    \"kowal\": 2,\n    \"dataZdarzenia\": \"2025-05-12\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        11
+      ],
+      "kowal": 2,
+      "dataZdarzenia": "2025-05-12"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-06-23",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-12",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [11], \"kowal\": 2, \"dataZdarzenia\": \"2025-05-12\", \"dataRozpoczecia\": \"2025-05-12\", \"dataWaznosci\": \"2025-06-23\" }"
+  },
+  {
+    "i": 31,
+    "text": "Dzisiaj Zbigniew Marecki podkuł Tornado, Luzaka i Błysk\nStan hodowli: Konie sportowe-Tornado:1;Błysk:2;Orion:3;Grafit:5 Konie hodowlane-Fala:4;Rumba:5;Klementyna:7;Aura:8 Konie rekreacyjne-Luzak:9;Samba:10;Tofik:12;Zara:13;Bryza:16 Źrebaki-Mgiełka:11;Oliwka:14;Drops:15 Kowale-Zbigniew Marecki:1;Jan Wrona:2 Weterynarze-Iwona Michalska:1 Dzisaj jest 19.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"payload\": {\n    \"konieId\": [\n      1,\n      9,\n      2\n    ],\n    \"kowal\": 1,\n    \"dataZdarzenia\": \"2025-05-19\"\n  }\n}\n```",
+    "gemini_json": {
+      "payload": {
+        "konieId": [
+          1,
+          9,
+          2
+        ],
+        "kowal": 1,
+        "dataZdarzenia": "2025-05-19"
+      }
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-06-30",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-19",
+        "generated": null
+      },
+      "payload": {
+        "expected": null,
+        "generated": {
+          "konieId": [
+            1,
+            9,
+            2
+          ],
+          "kowal": 1,
+          "dataZdarzenia": "2025-05-19"
+        }
+      },
+      "kowal": {
+        "expected": 1,
+        "generated": null
+      },
+      "konieId": {
+        "expected": [
+          1,
+          2,
+          9
+        ],
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-19",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [1, 2, 9], \"kowal\": 1, \"dataZdarzenia\": \"2025-05-19\", \"dataRozpoczecia\": \"2025-05-19\", \"dataWaznosci\": \"2025-06-30\" }"
+  },
+  {
+    "i": 32,
+    "text": "Dzisiaj Michał podkół mi wszystkie konie hodowlane u mnie w stajni\nStan hodowli: Konie sportowe-Gina:2; Konie hodowlane-Luna:3;Tajfun:4 Konie rekreacyjne-Mustang:5;Tolo:6 Źrebaki-Szara:7 Kowale-Michał Kowalski:1;Wiktor Machowski:2 Weterynarze-Darek Nowak:1 Dzsiaj jest 17.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.6,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      3,\n      4\n    ],\n    \"kowal\": 1,\n    \"dataZdarzenia\": \"2025-05-17\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        3,
+        4
+      ],
+      "kowal": 1,
+      "dataZdarzenia": "2025-05-17"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-08-09",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-17",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [3, 4], \"kowal\": 1, \"dataZdarzenia\": \"2025-05-17\", \"dataRozpoczecia\": \"2025-05-17\", \"dataWaznosci\": \"2025-08-09\" }"
+  },
+  {
+    "i": 33,
+    "text": "Byłem przedwczoraj u Piotrka Węglarskiego z Atlasem na podkuciu.\nStan hodowli: Konie sportowe-Atlas:3;Wicher:1 Konie hodowlane-Kora:2;Rumba:5 Konie rekreacyjne-Foks:4;Bryza:6 Źrebaki-Beryl:2 Kowale-Jan Wrona:2;Piotr Węglarski:3 Weterynarze-Katarzyna Lis:1 Dzisiaj jest 10.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.4,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      3\n    ],\n    \"kowal\": 3,\n    \"dataZdarzenia\": \"2025-05-08\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        3
+      ],
+      "kowal": 3,
+      "dataZdarzenia": "2025-05-08"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-08-02",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-10",
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-10",
+        "generated": "2025-05-08"
+      }
+    },
+    "expected": "{ \"konieId\": [3], \"kowal\": 3, \"dataZdarzenia\": \"2025-05-10\", \"dataRozpoczecia\": \"2025-05-10\", \"dataWaznosci\": \"2025-08-02\" }"
+  },
+  {
+    "i": 34,
+    "text": "Stefan pojechał 24 maja do Mazura z źrebakami na podkucie.\nStan hodowli: Konie sportowe-Tornado:2;Neon:3 Konie hodowlane-Mira:4;Gracja:2 Konie rekreacyjne-Odi:5;Lori:3 Źrebaki-Zefir:1;Plamka:2 Kowale-Andrzej Duda:1;Rafał Mazur:2 Weterynarze-Anna Kamińska:1;Tomasz Żuk:2",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.4,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [1, 2],\n    \"kowal\": 2,\n    \"dataZdarzenia\": \"2023-05-24\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        2
+      ],
+      "kowal": 2,
+      "dataZdarzenia": "2023-05-24"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-08-16",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-24",
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-24",
+        "generated": "2023-05-24"
+      }
+    },
+    "expected": "{ \"konieId\": [1, 2], \"kowal\": 2, \"dataZdarzenia\": \"2025-05-24\", \"dataRozpoczecia\": \"2025-05-24\", \"dataWaznosci\": \"2025-08-16\" }"
+  },
+  {
+    "i": 35,
+    "text": "Moja Bella miała 12 maja podkuwanie u Mateusza Króla, jest ważne do 19.08.2025.\nStan hodowli: Konie sportowe-Nero:1;Hektor:2 Konie hodowlane-Luna:3;Bella:1 Konie rekreacyjne-Czarek:6;Saba:5 Źrebaki-Miki:4 Kowale-Mateusz Król:3;Mikołaj Róg:1 Weterynarze-Patrycja Lewandowska:2",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.6,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"data\": {\n    \"konieId\": [\n      1\n    ],\n    \"kowal\": 3,\n    \"dataZdarzenia\": \"2024-05-12\",\n    \"dataWaznosci\": \"2025-08-19\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1
+      ],
+      "kowal": 3,
+      "dataZdarzenia": "2024-05-12",
+      "dataWaznosci": "2025-08-19"
+    },
+    "diff": {
+      "dataRozpoczecia": {
+        "expected": "2025-05-12",
+        "generated": null
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-12",
+        "generated": "2024-05-12"
+      }
+    },
+    "expected": "{ \"konieId\": [1], \"kowal\": 3, \"dataZdarzenia\": \"2025-05-12\", \"dataRozpoczecia\": \"2025-05-12\", \"dataWaznosci\": \"2025-08-19\" }"
+  },
+  {
+    "i": 36,
+    "text": "Dzisiaj Wrona podkuł Błyska i Sambę przed zawodami. Stan hodowli: Konie sportowe-Błysk:1;Orion:2;Flash:3 Konie hodowlane-Luna:4;Rumba:5;Selena:6;Tina:7 Konie rekreacyjne-Samba:8;Mustang:9;Tolo:10;Felka:11;Luzak:12 Źrebaki-Zefir:13 Kowale-Jan Wrona:1;Piotr Nowacki:2 Weterynarze-Karolina Kurowska:1\nDzsiaj jest 31.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.6,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      1,\n      8\n    ],\n    \"kowal\": 1,\n    \"dataZdarzenia\": \"2025-05-31\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        8
+      ],
+      "kowal": 1,
+      "dataZdarzenia": "2025-05-31"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-08-23",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-31",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [1, 8], \"kowal\": 1, \"dataZdarzenia\": \"2025-05-31\", \"dataRozpoczecia\": \"2025-05-31\", \"dataWaznosci\": \"2025-08-23\" }"
+  },
+  {
+    "i": 37,
+    "text": "Michał Wczoraj podkuł wszystkie konie\nStan hodowli: Konie sportowe-Atlas:1;Radar:2;Zenit:3;Cyklon:4 Konie hodowlane-Kora:5;Mira:6;Fanta:7 Konie rekreacyjne-Nela:8;Czarek:9;Bryza:10 Źrebaki-Tosia:11;Iskra:12;Drops:13;Oliwka:14 Kowale-Michał Kowalski:1;Wiktor Machowski:2 Weterynarze-Darek Nowak:1 Dzisiaj jest 19.05.2025",
+    "true_ep": "api/wydarzenia/podkucie",
+    "pred_ep": "api/wydarzenia/podkucie",
+    "ep_match": true,
+    "precision": 0.6,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/podkucie\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      1,\n      2,\n      3,\n      4,\n      5,\n      6,\n      7,\n      8,\n      9,\n      10,\n      11,\n      12,\n      13,\n      14\n    ],\n    \"kowal\": 1,\n    \"dataZdarzenia\": \"2025-05-18\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "kowal": 1,
+      "dataZdarzenia": "2025-05-18"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-06-29",
+        "generated": null
+      },
+      "dataRozpoczecia": {
+        "expected": "2025-05-18",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [1,2,3,4,5,6,7,8,9,10,11,12,13,14], \"kowal\": 1, \"dataZdarzenia\": \"2025-05-18\", \"dataRozpoczecia\": \"2025-05-18\", \"dataWaznosci\": \"2025-06-29\" }"
+  },
+  {
+    "i": 38,
+    "text": "Asia dziś dokonała inseminacji czrnego\nStan hodowli: Konie sportowe-Czarny:1;Husarz:2;Meteor:3;Ryś:4 Konie hodowlane-Melba:5;Raja:6;Lilla:7 Konie rekreacyjne-Zyzio:8;Bongo:9;Zorka:10 Źrebaki-Mini:11;Rico:12;Pepsi:13 Kowale-Roman Flak:1;Hubert Kania:2 Weterynarze-Joanna Gruszka:1;Natalia Żuk:2;Jakub Lis:3 Dzisiaj jest 19.05.2024",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"kon\": 1,\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2024-05-19\",\n    \"rodzajZdarzenia\": \"Inseminacja konia\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 1,
+      "weterynarz": 1,
+      "dataZdarzenia": "2024-05-19",
+      "rodzajZdarzenia": "Inseminacja konia"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-05-19",
+        "generated": "2024-05-19"
+      }
+    },
+    "expected": "{ \"kon\": 1, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-19\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+  },
+  {
+    "i": 39,
+    "text": "Ewelina sprawdziła mi 16 maja żrebność Koko\nStan hodowli: Konie sportowe-Piorun:1;Błysk:2 Konie hodowlane-Aksamitka:3 Konie rekreacyjne-Koko:4 Źrebaki-Bolek:5 Kowale-Mateusz Kępa:1 Weterynarze-Ewelina Sowa:1",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"data\": {\n    \"kon\": 4,\n    \"weterynarz\": 1,\n    \"rodzajZdarzenia\": \"Sprawdzenie źrebności\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 4,
+      "weterynarz": 1,
+      "rodzajZdarzenia": "Sprawdzenie źrebności"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-05-16",
+        "generated": null
+      }
+    },
+    "expected": "{ \"kon\": 4, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-16\", \"rodzajZdarzenia\": \"Sprawdzenie źrebności\" }"
+  },
+  {
+    "i": 40,
+    "text": "Wczoraj Tomek inseminował mi Lasera\nStan hodowli: Konie sportowe-Bizon:1;Grom:2;Stratus:3;Laser:4 Konie hodowlane-Luiza:5;Magda:6;Perła:7 Konie rekreacyjne-Nela:8;Toffi:9;Melon:10 Źrebaki-Dropik:11;Kajtek:12;Nelka:13;Zazu:14;Titi:15;Kropka:16 Kowale-Adrian Dzik:1;Emil Musiał:2;Szymon Bocian:3 Weterynarze-Weronika Lew:1;Tomasz Rogowski:2 Dzisiaj jest 14.04.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 1.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"kon\": 4,\n    \"weterynarz\": 2,\n    \"dataZdarzenia\": \"2025-04-13\",\n    \"rodzajZdarzenia\": \"Inseminacja konia\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 4,
+      "weterynarz": 2,
+      "dataZdarzenia": "2025-04-13",
+      "rodzajZdarzenia": "Inseminacja konia"
+    },
+    "diff": {},
+    "expected": "{ \"kon\": 4, \"weterynarz\": 2, \"dataZdarzenia\": \"2025-04-13\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+  },
+  {
+    "i": 41,
+    "text": "Pegaz dzisiaj urodził,dodaj mi to do bazy i przypisz Ole do tego\nStan hodowli: Konie sportowe-Smok:1;Pegaz:2;Yeti:3 Konie hodowlane-Wika:4;Szafir:5 Konie rekreacyjne-Tina:6;Fanta:7 Źrebaki-Mufi:8;Ptyś:9;Szarik:10 Kowale-Marcin Woźniak:1 Weterynarze-Aleksandra Plewa:1;Barbara Okoń:2 Dzisiaj jest 12.03.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"body\": {\n    \"kon\": 2,\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"12.03.2025\",\n    \"rodzajZdarzenia\": \"Wyźrebienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 2,
+      "weterynarz": 1,
+      "dataZdarzenia": "12.03.2025",
+      "rodzajZdarzenia": "Wyźrebienie"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-03-12",
+        "generated": "12.03.2025"
+      }
+    },
+    "expected": "{ \"kon\": 2, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-03-12\", \"rodzajZdarzenia\": \"Wyźrebienie\" }"
+  },
+  {
+    "i": 42,
+    "text": "Dino miał dzisiaj sprawdzanie źrebności. Alicja powiedziała, że wszystko było ok.\nStan hodowli: Konie sportowe-Argo:1;Blizzard:2 Konie hodowlane-Niwka:3;Dolina:4 Konie rekreacyjne-Sahara:5;Malibu:6;Dino:7 Źrebaki-Ciapek:8;Figiel:9 Kowale-Kamil Walas:1 Weterynarze-Alicja Dębska:1 Dzisiaj jest 06.06.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.8,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"data\": {\n    \"kon\": 7,\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-06-06\",\n    \"rodzajZdarzenia\": \"Sprawdzenie źrebności\",\n    \"opisZdarzenia\": \"wszystko było ok.\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 7,
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-06-06",
+      "rodzajZdarzenia": "Sprawdzenie źrebności",
+      "opisZdarzenia": "wszystko było ok."
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Ok",
+        "generated": "wszystko było ok."
+      }
+    },
+    "expected": "{ \"kon\": 7, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-06-06\", \"rodzajZdarzenia\": \"Sprawdzenie źrebności\", \"opisZdarzenia\": \"Ok\" }"
+  },
+  {
+    "i": 43,
+    "text": "Chcę dodać inseminację Nimbusa. 3 maja byliśmy u Nowińskiego.\nStan hodowli: Konie sportowe-Tornado:1;Nimbus:2;Orkan:3 Konie hodowlane-Klarka:4;Polana:5;Zorza:6 Konie rekreacyjne-Fuks:7;Lemon:8 Źrebaki-Marzanna:9 Kowale-Wojciech Roman:1;Bartek Szymczak:2 Weterynarze-Daniel Nowiński:1",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"body\": {\n    \"kon\": 2,\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"3 maja\",\n    \"rodzajZdarzenia\": \"Inseminacja konia\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 2,
+      "weterynarz": 1,
+      "dataZdarzenia": "3 maja",
+      "rodzajZdarzenia": "Inseminacja konia"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-05-03",
+        "generated": "3 maja"
+      }
+    },
+    "expected": "{ \"kon\": 2, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-03\", \"rodzajZdarzenia\": \"Inseminacja konia\" }"
+  },
+  {
+    "i": 44,
+    "text": "Wczoraj Pusia miała wyźrebianie. Ewa odbierała poród.\nStan hodowli: Konie sportowe-Kasztan:1;Fenix:2;Zodiak:3 Konie hodowlane-Selina:4;Amira:5;Brenda:6 Konie rekreacyjne-Tropik:7;Odi:8;Tosia:9;Baloo:10 Źrebaki-Riko:11;Pusia:12;Beti:13 Kowale-Jan Kłos:1 Weterynarze-Zofia Bukowska:1;Ewa Kopczyńska:2 Dzisiaj jest 01.04.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 1.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"data\": {\n    \"kon\": 12,\n    \"weterynarz\": 2,\n    \"dataZdarzenia\": \"2025-03-31\",\n    \"rodzajZdarzenia\": \"Wyźrebienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 12,
+      "weterynarz": 2,
+      "dataZdarzenia": "2025-03-31",
+      "rodzajZdarzenia": "Wyźrebienie"
+    },
+    "diff": {},
+    "expected": "{ \"kon\": 12, \"weterynarz\": 2, \"dataZdarzenia\": \"2025-03-31\", \"rodzajZdarzenia\": \"Wyźrebienie\" }"
+  },
+  {
+    "i": 45,
+    "text": "Dodaj mi nowy rozród u Bizona. Przypisz Martę Rak jako weterynarza.\nStan hodowli: Konie sportowe-Harry:1;Joker:2;Nitro:3;Bizon:4 Konie hodowlane-Duma:5;Mokka:6 Konie rekreacyjne-Karmel:7;Sisi:8;Lolek:9 Źrebaki-Saba:10;Łatek:11 Kowale-Michał Żyła:1;Adam Frączek:2 Weterynarze-Marta Rak:1;Grzegorz Żuchowski:2 Dzisiaj jest 09.06.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"body\": {\n    \"kon\": 4,\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"09.06.2025\",\n    \"rodzajZdarzenia\": \"Inne\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 4,
+      "weterynarz": 1,
+      "dataZdarzenia": "09.06.2025",
+      "rodzajZdarzenia": "Inne"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-06-09",
+        "generated": "09.06.2025"
+      }
+    },
+    "expected": "{ \"kon\": 4, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-06-09\", \"rodzajZdarzenia\": \"Inne\" }"
+  },
+  {
+    "i": 46,
+    "text": "Gladiator będzie miał sprawdzanie płodności u Sandry.\nStan hodowli: Konie sportowe-Gladiator:1;Echo:2 Konie hodowlane-Syriusz:3;Latte:4;Nutka:5 Konie rekreacyjne-Perełka:6;Fokus:7;Lusi:8 Źrebaki-Czika:9;Tymek:10;Rumba:11 Kowale-Piotr Cichy:1;Daniel Krupa:2 Weterynarze-Sandra Pietrzak:1. Dzisiaj jest 04.06.2025",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"data\": {\n    \"kon\": 1,\n    \"weterynarz\": 1,\n    \"rodzajZdarzenia\": \"Sprawdzenie źrebności\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 1,
+      "weterynarz": 1,
+      "rodzajZdarzenia": "Sprawdzenie źrebności"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-06-04",
+        "generated": null
+      }
+    },
+    "expected": "{ \"kon\": 1, \"weterynarz\": 1, \"dataZdarzenia\": \"2025-06-04\", \"rodzajZdarzenia\": \"Sprawdzenie źrebności\" }"
+  },
+  {
+    "i": 47,
+    "text": "Wczoraj Paweł pomógł mi w wyźrebieniu Jagody\nStan hodowli: Konie sportowe-Vento:1 Konie hodowlane-Mirabelka:2;Jagoda:3;Sława:4 Konie rekreacyjne-Mika:5;Teo:6 Źrebaki-Odi:7;Nika:8;Hera:9 Kowale-Karol Banach:1 Weterynarze-Lidia Tomczak:1;Paweł Czerniak:2 Dzisiaj jest 19.05.2024",
+    "true_ep": "api/wydarzenia/rozrody",
+    "pred_ep": "api/wydarzenia/rozrody",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/rozrody\",\n  \"body\": {\n    \"kon\": 3,\n    \"weterynarz\": 2,\n    \"dataZdarzenia\": \"18.05.2024\",\n    \"rodzajZdarzenia\": \"Wyźrebienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "kon": 3,
+      "weterynarz": 2,
+      "dataZdarzenia": "18.05.2024",
+      "rodzajZdarzenia": "Wyźrebienie"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2024-05-18",
+        "generated": "18.05.2024"
+      }
+    },
+    "expected": "{ \"kon\": 3, \"weterynarz\": 2, \"dataZdarzenia\": \"2024-05-18\", \"rodzajZdarzenia\": \"Wyźrebienie\" }"
+  },
+  {
+    "i": 48,
+    "text": "Dodaj mi Jakuba Detmera, który jest weterynarzem",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "api/weterynarze",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/weterynarze\",\n  \"data\": {\n    \"imieINazwisko\": \"Jakub Detmer\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/weterynarze\",\n  \"data\": {\n    \"imieINazwisko\": \"Jakub Detmer\",\n    \"hodowla\": 1\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Jakub Detmer\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 49,
+    "text": "Hej, dodaj mi weterynarza Szymusia Jankowskiego, tel 9855632145",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "NIEZNANY",
+    "ep_match": false,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"api/weterynarze\": {\n    \"imieINazwisko\": \"Szymuś Jankowski\",\n    \"numerTelefonu\": \"9855632145\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "api/weterynarze": {
+        "imieINazwisko": "Szymuś Jankowski",
+        "numerTelefonu": "9855632145",
+        "hodowla": 1
+      }
+    },
+    "diff": {
+      "api/weterynarze": {
+        "expected": null,
+        "generated": {
+          "imieINazwisko": "Szymuś Jankowski",
+          "numerTelefonu": "9855632145",
+          "hodowla": 1
+        }
+      },
+      "imieINazwisko": {
+        "expected": "Szymuś Jankowski",
+        "generated": null
+      },
+      "hodowla": {
+        "expected": 0,
+        "generated": null
+      },
+      "numerTelefonu": {
+        "expected": "9855632145",
+        "generated": null
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Szymuś Jankowski\", \"numerTelefonu\": \"9855632145\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 50,
+    "text": "Dodaj mi weterynarza Jana Smarowskiego",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "api/weterynarze",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/weterynarze\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jan Smarowski\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/weterynarze\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Jan Smarowski\",\n    \"hodowla\": 1\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Jan Smarowski\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 51,
+    "text": "Prosiłbym o dodanie do mojej hodowli Jana Szweina, który jest weterynarzem. Jego nr telefnu to 432-567-876",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "api/weterynarze",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/weterynarze\",\n  \"payload\": {\n    \"imieINazwisko\": \"Jan Szwein\",\n    \"numerTelefonu\": \"432-567-876\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "payload": {
+        "imieINazwisko": "Jan Szwein",
+        "numerTelefonu": "432-567-876",
+        "hodowla": 1
+      }
+    },
+    "diff": {
+      "imieINazwisko": {
+        "expected": "Jan Szweina",
+        "generated": null
+      },
+      "payload": {
+        "expected": null,
+        "generated": {
+          "imieINazwisko": "Jan Szwein",
+          "numerTelefonu": "432-567-876",
+          "hodowla": 1
+        }
+      },
+      "hodowla": {
+        "expected": 0,
+        "generated": null
+      },
+      "numerTelefonu": {
+        "expected": "432567876",
+        "generated": null
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Jan Szweina\", \"numerTelefonu\": \"432567876\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 52,
+    "text": "Weterynarz Marek Jakubia 65-432-43-23",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "NIEZNANY",
+    "ep_match": false,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"api/weterynarze\": {\n    \"imieINazwisko\": \"Marek Jakubia\",\n    \"numerTelefonu\": \"65-432-43-23\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "api/weterynarze": {
+        "imieINazwisko": "Marek Jakubia",
+        "numerTelefonu": "65-432-43-23",
+        "hodowla": 1
+      }
+    },
+    "diff": {
+      "api/weterynarze": {
+        "expected": null,
+        "generated": {
+          "imieINazwisko": "Marek Jakubia",
+          "numerTelefonu": "65-432-43-23",
+          "hodowla": 1
+        }
+      },
+      "imieINazwisko": {
+        "expected": "Marek Jakubia",
+        "generated": null
+      },
+      "hodowla": {
+        "expected": 0,
+        "generated": null
+      },
+      "numerTelefonu": {
+        "expected": "654324323",
+        "generated": null
+      }
+    },
+    "expected": "{ \"imieINazwisko\": \"Marek Jakubia\", \"numerTelefonu\": \"654324323\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 53,
+    "text": "Dodaj weterynarza Krzysztof Swędzidziura",
+    "true_ep": "api/weterynarze",
+    "pred_ep": "api/weterynarze",
+    "ep_match": true,
+    "precision": 0.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/weterynarze\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Krzysztof Swędzidziura\",\n    \"hodowla\": 1\n  }\n}\n```",
+    "gemini_json": {
+      "error": "JSONDecodeError",
+      "raw": "{\n  \"endpoint\": \"api/weterynarze\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"imieINazwisko\": \"Krzysztof Swędzidziura\",\n    \"hodowla\": 1\n  }\n}"
+    },
+    "diff": {},
+    "expected": "{ \"imieINazwisko\": \"Krzysztof Swędzidzura\", \"numerTelefonu\": \"\", \"hodowla\": 0 }"
+  },
+  {
+    "i": 54,
+    "text": "Wojtek odrobaczył wczoraj wszystkie konie,stwierdzil ze Zara musi dostać leki\nStan hodowli: Konie sportowe-Rubin:1;Atlas:2;Flash:3;Zenit:4 Konie hodowlane-Gaja:5;Tina:6;Milka:7;Klementyna:8 Konie rekreacyjne-Tofik:9;Samba:10;Zara:11;Bryza:12 Źrebaki-Perełka:13;Figa:14;Mgiełka:15 Kowale-Mateusz Król:1 Weterynarze-Wojciech Bryś:1;Dominika Pawlak:2 Dzisiaj jest 12.04.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"data\": {\n    \"konieId\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-04-11\",\n    \"rodzajZdarzenia\": \"Odrobaczanie\",\n    \"opisZdarzenia\": \"Stwierdzono, że Zara musi dostać leki.\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-04-11",
+      "rodzajZdarzenia": "Odrobaczanie",
+      "opisZdarzenia": "Stwierdzono, że Zara musi dostać leki."
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-10-11",
+        "generated": null
+      },
+      "opisZdarzenia": {
+        "expected": "Zara musiala dostac leki",
+        "generated": "Stwierdzono, że Zara musi dostać leki."
+      }
+    },
+    "expected": "{ \"konieId\": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-04-11\", \"dataWaznosci\": \"2025-10-11\", \"rodzajZdarzenia\": \"Odrobaczanie\", \"opisZdarzenia\": \"Zara musiala dostac leki\" }"
+  },
+  {
+    "i": 55,
+    "text": "Dodaj mi prosze informacje ze Patrycja zaszczepiła tydzień temu Neona\nStan hodowli: Konie sportowe-Neon:1 Konie hodowlane-Kleo:2;Aura:3 Konie rekreacyjne-Borys:4;Nela:5;Czarek:6 Źrebaki-Zefir:7;Mała:8;Leo:9 Kowale-Michał Kowalski:1;Radosław Kowal:2 Weterynarze-Patrycja Lewandowska:1 Dzisiaj jest 12.02.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.8,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      1\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-02-05\",\n    \"rodzajZdarzenia\": \"Szczepienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-02-05",
+      "rodzajZdarzenia": "Szczepienie"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-08-05",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [1], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-02-05\", \"dataWaznosci\": \"2025-08-05\", \"rodzajZdarzenia\": \"Szczepienie\" }"
+  },
+  {
+    "i": 56,
+    "text": "Konie Hodowlane dostały dziś od Ani Selen\nStan hodowli: Konie sportowe-Hektor:1;Radar:2;Orion:3 Konie hodowlane-Mira:4;Gaja:5;Klementyna:6;Róża:7 Konie rekreacyjne-Lori:8;Merlin:9;Felka:10 Źrebaki-Iskra:11;Plamka:12;Drops:13;Tosia:14 Kowale-Bartek Mądry:1 Weterynarze-Marcin Grzelak:1;Anna Kamińska:2 Dzisiaj jest12.05.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.67,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      4,\n      5,\n      6,\n      7\n    ],\n    \"weterynarz\": 2,\n    \"dataZdarzenia\": \"2025-05-12\",\n    \"rodzajZdarzenia\": \"Podanie suplementów\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "weterynarz": 2,
+      "dataZdarzenia": "2025-05-12",
+      "rodzajZdarzenia": "Podanie suplementów"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-11-12",
+        "generated": null
+      },
+      "opisZdarzenia": {
+        "expected": "Podano Selen",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [4,5,6,7], \"weterynarz\": 2, \"dataZdarzenia\": \"2025-05-12\", \"dataWaznosci\": \"2025-11-12\", \"rodzajZdarzenia\": \"Podanie suplementów\", \"opisZdarzenia\": \"Podano Selen\" }"
+  },
+  {
+    "i": 57,
+    "text": "Żuk zaszczpił dziś Błyska\nStan hodowli: Konie sportowe-Błysk:1;Cyklon:2;Wicher:3;Simba:4;Flash:5 Konie hodowlane-Selena:6;Fanta:7;Milka:8;Aura:9;Bella:10 Konie rekreacyjne-Bambi:11;Czarek:12;Tofik:13;Mustang:14;Luzak:15 Źrebaki-Zefir:16;Figa:17;Oliwka:18;Leo:19;Mgiełka:20 Kowale-Karol Buczek:1;Wiktor Machowski:2;Paweł Kaczmarek:3 Weterynarze-Ewelina Maj:1;Hanna Wrona:2;Tomasz Żuk:3 Dzisiaj jest 14.04.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.8,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      1\n    ],\n    \"weterynarz\": 3,\n    \"dataZdarzenia\": \"2025-04-14\",\n    \"rodzajZdarzenia\": \"Szczepienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1
+      ],
+      "weterynarz": 3,
+      "dataZdarzenia": "2025-04-14",
+      "rodzajZdarzenia": "Szczepienie"
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-10-14",
+        "generated": null
+      }
+    },
+    "expected": "{ \"konieId\": [1], \"weterynarz\": 3, \"dataZdarzenia\": \"2025-04-14\", \"dataWaznosci\": \"2025-10-14\", \"rodzajZdarzenia\": \"Szczepienie\" }"
+  },
+  {
+    "i": 58,
+    "text": "Proszę dodać wpis, że moje konie hodowlane miały odrobaczanie u Dominika Pawlaka 12 maja. Konie nie miały posożytów, następny przegląd za 5 miesięcy.\nStan hodowli: Konie sportowe-Piorun:1;Atlas:2;Simba:3 Konie hodowlane-Kleo:4;Selena:5;Dakota:6;Mira:7 Konie rekreacyjne-Mustang:8;Bryza:9;Felka:10;Merlin:11 Źrebaki-Bąbel:12;Oliwka:13;Figa:14;Zefir:15 Kowale-Rafał Mazur:1;Andrzej Duda:2 Weterynarze-Dominika Pawlak:1",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.5,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      4,\n      5,\n      6,\n      7\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2024-05-12\",\n    \"dataWaznosci\": \"2024-10-12\",\n    \"rodzajZdarzenia\": \"Odrobaczanie\",\n    \"opisZdarzenia\": \"Konie nie miały pasożytów.\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2024-05-12",
+      "dataWaznosci": "2024-10-12",
+      "rodzajZdarzenia": "Odrobaczanie",
+      "opisZdarzenia": "Konie nie miały pasożytów."
+    },
+    "diff": {
+      "dataWaznosci": {
+        "expected": "2025-10-12",
+        "generated": "2024-10-12"
+      },
+      "opisZdarzenia": {
+        "expected": "Konie nie miały pasożytów, następny przegląd za 5 miesięcy",
+        "generated": "Konie nie miały pasożytów."
+      },
+      "dataZdarzenia": {
+        "expected": "2025-05-12",
+        "generated": "2024-05-12"
+      }
+    },
+    "expected": "{ \"konieId\": [4,5,6,7], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-05-12\", \"dataWaznosci\": \"2025-10-12\", \"rodzajZdarzenia\": \"Odrobaczanie\", \"opisZdarzenia\": \"Konie nie miały pasożytów, następny przegląd za 5 miesięcy\" }"
+  },
+  {
+    "i": 59,
+    "text": "Dodaj wizytę u dentysty dla Czarka u Kurowskiej na 18 kwietnia.\nStan hodowli: Konie sportowe-Piorun:1;Atlas:2 Konie hodowlane-Kora:3;Milka:4;Gracja:5 Konie rekreacyjne-Lori:6;Tofik:7;Czarek:8 Źrebaki-Iskra:9;Figa:10 Kowale-Michał Kowalski:1;Zbigniew Marecki:2 Weterynarze-Karolina Kurowska:1;Dominika Pawlak:2",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      8\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2024-04-18\",\n    \"rodzajZdarzenia\": \"Dentysta\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        8
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2024-04-18",
+      "rodzajZdarzenia": "Dentysta"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-04-18",
+        "generated": "2024-04-18"
+      }
+    },
+    "expected": "{ \"konieId\": [8], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-04-18\", \"rodzajZdarzenia\": \"Dentysta\" }"
+  },
+  {
+    "i": 60,
+    "text": "Umówiłem szczepienie dzisiaj dla Borysa u Iwony Michalskiej na 1 czerwca.\nStan hodowli: Konie sportowe-Orion:1;Flash:2;Skra:3;Gina:4 Konie hodowlane-Rumba:5;Róża:6 Konie rekreacyjne-Samba:7;Mustang:8;Borys:9 Źrebaki-Mgiełka:10;Bąbel:11;Plamka:12 Kowale-Jan Wrona:1 Weterynarze-Tomasz Żuk:1;Iwona Michalska:2;Marcin Grzelak:3",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.75,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      9\n    ],\n    \"weterynarz\": 2,\n    \"dataZdarzenia\": \"2024-06-01\",\n    \"rodzajZdarzenia\": \"Szczepienie\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        9
+      ],
+      "weterynarz": 2,
+      "dataZdarzenia": "2024-06-01",
+      "rodzajZdarzenia": "Szczepienie"
+    },
+    "diff": {
+      "dataZdarzenia": {
+        "expected": "2025-06-01",
+        "generated": "2024-06-01"
+      }
+    },
+    "expected": "{ \"konieId\": [9], \"weterynarz\": 2, \"dataZdarzenia\": \"2025-06-01\", \"rodzajZdarzenia\": \"Szczepienie\" }"
+  },
+  {
+    "i": 61,
+    "text": "Proszę zanotuj podanie biotyny Małej przez Ewelinę Maj.\nStan hodowli: Konie sportowe-Zenit:1;Hektor:2 Konie hodowlane-Selena:3;Tina:4;Luna:5;Karma:6 Konie rekreacyjne-Zara:7;Felka:8;Nela:9 Źrebaki-Tosia:10;Drops:11;Leo:12;Oliwka:13;Mała:14 Kowale-Katarzyna Lis:1;Mikołaj Róg:2 Weterynarze-Ewelina Maj:1 Dzisiaj jest 01.01.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.8,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"body\": {\n    \"konieId\": [\n      14\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-01-01\",\n    \"rodzajZdarzenia\": \"Podanie suplementów\",\n    \"opisZdarzenia\": \"Podanie biotyny\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        14
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-01-01",
+      "rodzajZdarzenia": "Podanie suplementów",
+      "opisZdarzenia": "Podanie biotyny"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Biotyna",
+        "generated": "Podanie biotyny"
+      }
+    },
+    "expected": "{ \"konieId\": [14], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-01-01\", \"rodzajZdarzenia\": \"Podanie suplementów\", \"opisZdarzenia\": \"Biotyna\" }"
+  },
+  {
+    "i": 62,
+    "text": "Wczoraj oddałem Radara na badania profilaktyczne u Wrony.\nStan hodowli: Konie sportowe-Tornado:1;Wicher:2;Radar:3;Simba:4 Konie hodowlane-Fanta:5;Bella:6 Konie rekreacyjne-Bambi:7;Luzak:8 Źrebaki-Iskra:9 Kowale-Rafał Gawron:1;Andrzej Duda:2;Janek Kula:3 Weterynarze-Hanna Wrona:1 Dzisiaj jest 31.03.2025.",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 0.8,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"method\": \"POST\",\n  \"body\": {\n    \"konieId\": [\n      3\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-03-30\",\n    \"rodzajZdarzenia\": \"Inne\",\n    \"opisZdarzenia\": \"badania profilaktyczne\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        3
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-03-30",
+      "rodzajZdarzenia": "Inne",
+      "opisZdarzenia": "badania profilaktyczne"
+    },
+    "diff": {
+      "opisZdarzenia": {
+        "expected": "Badanie profilaktyczne",
+        "generated": "badania profilaktyczne"
+      }
+    },
+    "expected": "{ \"konieId\": [3], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-03-30\", \"rodzajZdarzenia\": \"Inne\", \"opisZdarzenia\": \"Badanie profilaktyczne\" }"
+  },
+  {
+    "i": 63,
+    "text": "Dzisiaj wszystkie konie sportowe miały dentyste, Czajka patrzyła im w zęby\nStan hodowli: Konie sportowe-Cyklon:1;Lotos:2 Konie hodowlane-Gracja:3;Fala:4 Konie rekreacyjne-Merlin:5 Kowale-Jakub Nowicki:1 Weterynarze-Aleksandra Czajka:1 Dzisiaj jest 12.03.2025",
+    "true_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "pred_ep": "api/wydarzenia/zdarzenia_profilaktyczne",
+    "ep_match": true,
+    "precision": 1.0,
+    "gemini_raw": "```json\n{\n  \"endpoint\": \"api/wydarzenia/zdarzenia_profilaktyczne\",\n  \"data\": {\n    \"konieId\": [\n      1,\n      2\n    ],\n    \"weterynarz\": 1,\n    \"dataZdarzenia\": \"2025-03-12\",\n    \"rodzajZdarzenia\": \"Dentysta\"\n  }\n}\n```",
+    "gemini_json": {
+      "konieId": [
+        1,
+        2
+      ],
+      "weterynarz": 1,
+      "dataZdarzenia": "2025-03-12",
+      "rodzajZdarzenia": "Dentysta"
+    },
+    "diff": {},
+    "expected": "{ \"konieId\": [1, 2], \"weterynarz\": 1, \"dataZdarzenia\": \"2025-03-12\", \"rodzajZdarzenia\": \"Dentysta\" }"
+  }
+]
